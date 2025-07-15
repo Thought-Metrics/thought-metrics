@@ -1,0 +1,260 @@
+@import '@/styles/variables.scss';
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  background-color: $background-color;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    width: 100%;
+    margin: 0 0;
+    padding: $spacing-8 $spacing-6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    width: 100%;
+    gap: 5rem;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 33rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    
+    // Fade animations for image
+    &--fade-in {
+      animation: fadeInImage 1.2s ease-out forwards;
+    }
+    
+    &--fade-out {
+      animation: fadeOutImage 0.6s ease-in forwards;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(1);
+  }
+
+  &__text-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__text {
+    text-align: left;
+    font-family: $font-family-primary;
+    font-size: $font-size-5xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    color: $black;
+    letter-spacing: 2px;
+    margin: 0;
+    
+    // Fade animations for text
+    &--fade-in {
+      animation: fadeInText 1.2s ease-out 0.3s forwards;
+      opacity: 0;
+    }
+    
+    &--fade-out {
+      animation: fadeOutText 0.6s ease-in forwards;
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    gap: $spacing-3;
+    justify-content: center;
+    position: absolute;
+    bottom: $spacing-12;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: $border-radius-full;
+    border: none;
+    background-color: $gray-medium;
+    cursor: pointer;
+    transition: all $transition-normal;
+    padding: 0;
+
+    &:hover {
+      background-color: $gray-dark;
+      transform: scale(1.1);
+    }
+
+    &--active {
+      background-color: $primary-color;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+// Keyframe animations
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeOutImage {
+  0% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(30px) scale(0.95);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutText {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+// Responsive styles
+@media (max-width: $breakpoint-xl) {
+  .hero-carousel {
+    &__content {
+      gap: $spacing-12;
+    }
+
+    &__text {
+      font-size: $font-size-4xl;
+    }
+
+    &__image-wrapper {
+      height: 500px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-lg) {
+  .hero-carousel {
+    &__container {
+      padding: $spacing-6 $spacing-4;
+    }
+
+    &__content {
+      grid-template-columns: 1fr;
+      gap: $spacing-8;
+      text-align: center;
+    }
+
+    &__image-wrapper {
+      height: 400px;
+      order: 1;
+    }
+
+    &__text-wrapper {
+      order: 2;
+      justify-content: center;
+      padding: 0 $spacing-4;
+    }
+
+    &__text {
+      font-size: $font-size-3xl;
+      text-align: center;
+    }
+
+    &__indicators {
+      bottom: $spacing-8;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .hero-carousel {
+    min-height: 80vh;
+
+    &__container {
+      min-height: 80vh;
+      padding: $spacing-4 $spacing-3;
+    }
+
+    &__content {
+      gap: $spacing-6;
+    }
+
+    &__image-wrapper {
+      height: 300px;
+    }
+
+    &__text {
+      font-size: $font-size-2xl;
+    }
+
+    &__indicators {
+      bottom: $spacing-6;
+    }
+
+    &__dot {
+      width: 10px;
+      height: 10px;
+
+      &--active {
+        width: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .hero-carousel {
+    &__image-wrapper {
+      height: 250px;
+    }
+
+    &__text {
+      font-size: $font-size-xl;
+    }
+  }
+}
