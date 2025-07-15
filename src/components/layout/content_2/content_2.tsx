@@ -54,7 +54,7 @@ const ContentSecond: React.FC = () => {
         </h2>
 
         <div className="content-second__grid">
-          {contentSecondData.services.map((service, index) => (
+          {contentSecondData.services1.map((service, index) => (
             <div
               key={index + service.title}
               className={getCardClassName(service, index)}
@@ -64,12 +64,36 @@ const ContentSecond: React.FC = () => {
                 <p className="service-card__description">
                   {service.description}
                 </p>
-                <button
+                <div
                   className="service-card__arrow"
                   aria-label={`Learn more about ${service.title}`}
                 >
                   <img src={'/public/icons/right-arrow-black.svg'} alt="" />
-                </button>
+                </div>
+              </div>
+              <div className="service-card__illustration">
+                <img src={service.illustration} alt="" />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="content-second__grid">
+          {contentSecondData.services2.map((service, index) => (
+            <div
+              key={index + service.title}
+              className={getCardClassName(service, index)}
+            >
+              <div className="service-card__content">
+                <h3 className="service-card__title">{service.title}</h3>
+                <p className="service-card__description">
+                  {service.description}
+                </p>
+                <div
+                  className="service-card__arrow"
+                  aria-label={`Learn more about ${service.title}`}
+                >
+                  <img src={'/public/icons/right-arrow-black.svg'} alt="" />
+                </div>
               </div>
               <div className="service-card__illustration">
                 <img src={service.illustration} alt="" />

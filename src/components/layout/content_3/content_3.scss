@@ -1,0 +1,229 @@
+@import '@/styles/variables.scss';
+
+.content-third {
+  background-color: $white;
+  padding: $spacing-20 $spacing-20;
+  min-height: 100vh;
+  color: #000 !important;
+
+  &__container {
+    max-width: $breakpoint-xl;
+    margin: 0 auto;
+    padding: 0 $spacing-6;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #000000;
+    margin: 0 0 2rem 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: $spacing-8;
+    align-items: start;
+  }
+
+  &__content-area {
+    width: 100%;
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-2;
+  }
+}
+
+.industry-card {
+  color: #000 !important;
+  padding: 3rem 0 1rem 2rem;
+  background-color: #ffffff;
+  border: 1.5px solid #000000;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
+
+  &__header {
+    padding-bottom: 2rem;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-size: 1.2rem;
+    font-weight: $font-weight-bold;
+    color: $black;
+    margin: 0;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-8;
+    min-height: 400px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+  }
+
+  &__subtitle {
+    font-family: $font-family-primary;
+    font-size: 1rem;
+    font-weight: $font-weight-semi-bold;
+    color: $black;
+    margin: 0;
+  }
+
+  &__description {
+    font-family: $font-family-primary;
+    font-size: 1rem;
+    line-height: 1;
+    color: #000;
+    margin: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 1.5rem;
+    font-family: 'Barlow', system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    color: #000;
+
+    &::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: $primary-color;
+      font-size: $font-size-xl;
+      line-height: 1;
+    }
+  }
+
+  &__image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 3rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__footer {
+    padding: $spacing-6 $spacing-8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__number {
+    width: 48px;
+    height: 48px;
+    background-color: $primary-color;
+    color: #000;
+    border-radius: $border-radius-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family-primary;
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+  }
+
+  &__cta {
+    padding: $spacing-3 $spacing-6;
+    background-color: $primary-color;
+    color: #000;
+    border: none;
+    border-radius: $border-radius-lg;
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semi-bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      box-shadow: $shadow-md;
+    }
+  }
+}
+
+.industry-tab {
+  color: #000 !important;
+  width: 100%;
+  padding: .75rem;
+  background-color: $secondary-color;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    z-index: 0;
+  }
+
+  &:hover {
+    box-shadow: $shadow-md;
+
+    &::before {
+      left: 0;
+    }
+
+    .industry-tab__label {
+      color: #000;
+    }
+  }
+
+  &--active {
+    background-color: $primary-color;
+
+    &::before {
+      left: 0;
+    }
+
+    .industry-tab__label {
+      color: #000;
+      font-weight: $font-weight-semi-bold;
+    }
+  }
+
+  &__label {
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    color: $black;
+    position: relative;
+    z-index: 1;
+  }
+}

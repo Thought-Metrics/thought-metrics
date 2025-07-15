@@ -9,7 +9,7 @@ export interface ServiceCardData {
 export const contentSecondData = {
   mainTitle:
     "We're a full-service B2B market research thought partner committed to\nstrengthening your strategies with data-driven insights and expertise.",
-  services: [
+  services1: [
     {
       type: 1,
       title: 'Branding and Advertising Communication',
@@ -26,6 +26,8 @@ export const contentSecondData = {
       backgroundColor: 'purple',
       illustration: '/illustrations/door-person.svg',
     },
+  ] as ServiceCardData[],
+  services2: [
     {
       type: 2,
       title: 'Customer Research and Segmentation',
@@ -42,5 +44,5 @@ export const contentSecondData = {
       backgroundColor: 'pink',
       illustration: '/illustrations/box-cluster.svg',
     },
-  ] as ServiceCardData[],
+  ],
 };
