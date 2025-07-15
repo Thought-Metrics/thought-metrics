@@ -1,0 +1,299 @@
+@import '@/styles/variables.scss';
+
+.content-second {
+  background-color: $secondary-color;
+  padding: 4rem;
+  overflow: hidden;
+
+  &__container {
+    max-width: $breakpoint-xl;
+    margin: 0 auto;
+    padding: 0 $spacing-6;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-semi-bold;
+    line-height: $line-height-tight;
+    color: $black;
+    margin: 0;
+    padding-bottom: 3rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-8;
+  }
+}
+
+.service-card {
+  position: relative;
+  border-radius: $border-radius-3xl;
+  padding: $spacing-12;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all $transition-normal;
+  opacity: 0;
+  transform: translateY(30px);
+
+  &--visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &--delay-1 {
+    transition-delay: 0.1s;
+  }
+
+  &--delay-2 {
+    transition-delay: 0.2s;
+  }
+
+  &--delay-3 {
+    transition-delay: 0.3s;
+  }
+
+  &--delay-4 {
+    transition-delay: 0.4s;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl;
+
+    .service-card__arrow {
+      transform: scale(1.1);
+      box-shadow: $shadow-md;
+    }
+
+    .service-card__illustration {
+      transform: scale(1.05);
+    }
+  }
+
+  // Color variations
+  &--green {
+    background-color: $third-color-1;
+    color: $black;
+    width: 24rem;
+  }
+
+  &--purple {
+    background: $gradient-first;
+    color: $black;
+    width: 46rem;
+  }
+
+  &--gray {
+    background: $gradient-second;
+    color: $black;
+    width: 46rem;
+  }
+
+  &--pink {
+    background: linear-gradient(135deg, #ffd9e0 0%, #ffbfcf 100%);
+    color: $black;
+    width: 24rem;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    margin: 0 0 $spacing-6 0;
+    max-width: 80%;
+  }
+
+  &__description {
+    font-family: $font-family-primary;
+    font-size: $font-size-base;
+    line-height: $line-height-relaxed;
+    margin: 0 0 $spacing-8 0;
+    flex: 1;
+    opacity: 0.8;
+  }
+
+  &__arrow {
+    width: 48px;
+    height: 48px;
+    color: $white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all $transition-normal;
+    position: relative;
+    z-index: 3;
+  }
+
+  &__illustration {
+    position: absolute;
+    transition: transform $transition-normal;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // Illustration positioning
+  &--green &__illustration {
+    bottom: -50px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    color: darken($third-color, 20%);
+  }
+
+  &--purple &__illustration {
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    color: #9b7dd4;
+  }
+
+  &--gray &__illustration {
+    bottom: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    color: darken($gray-medium, 10%);
+  }
+
+  &--pink &__illustration {
+    bottom: 30px;
+    right: 30px;
+    width: 120px;
+    height: 120px;
+    color: #ff8fa3;
+  }
+}
+
+// Shapes
+.shape {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Responsive styles
+@media (max-width: $breakpoint-lg) {
+  .content-second {
+    &__title {
+      font-size: $font-size-3xl;
+      margin-bottom: $spacing-12;
+    }
+
+    &__grid {
+      gap: $spacing-6;
+    }
+  }
+
+  .service-card {
+    padding: $spacing-10;
+    min-height: 300px;
+
+    &__title {
+      font-size: $font-size-lg;
+    }
+
+    &__description {
+      font-size: $font-size-sm;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .content-second {
+    padding: $spacing-12 0;
+
+    &__container {
+      padding: 0 $spacing-4;
+    }
+
+    &__title {
+      font-size: $font-size-2xl;
+      margin-bottom: $spacing-10;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: $spacing-4;
+    }
+  }
+
+  .service-card {
+    padding: $spacing-8;
+    min-height: 300px;
+
+    &__arrow {
+      width: 40px;
+      height: 40px;
+    }
+
+    &--green &__illustration,
+    &--gray &__illustration {
+      width: 200px;
+      height: 200px;
+    }
+
+    &--purple &__illustration {
+      width: 80px;
+      height: 80px;
+    }
+
+    &--pink &__illustration {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .content-second {
+    &__title {
+      font-size: $font-size-xl;
+      padding: 0 $spacing-2;
+    }
+  }
+
+  .service-card {
+    padding: $spacing-6;
+    min-height: 280px;
+
+    &__title {
+      font-size: $font-size-lg;
+      max-width: 90%;
+    }
+
+    &__description {
+      font-size: $font-size-xs;
+    }
+
+    &__illustration {
+      opacity: 0.5;
+    }
+  }
+}

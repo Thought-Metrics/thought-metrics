@@ -14,25 +14,25 @@ export const contentData = {
     'Harness our comprehensive solutions to unearth valuable insights that drive innovation, improve customer connections, and boost efficiency',
   cards: [
     {
-      icon: 'users', // You can use icon names or SVG paths
+      icon: '/icons/people.svg',
       title: 'Audience',
       description:
         'Tap into a wide panel of respondents for any of your market research needs.',
     },
     {
-      icon: 'chat-bubble',
+      icon: '/icons/research.svg',
       title: 'Qualitative Research',
       description:
         'Tap into a wide panel of respondents for any of your market research needs.',
     },
     {
-      icon: 'chart',
+      icon: '/icons/statitics.svg',
       title: 'Quantitative Research',
       description:
         'Tap into a wide panel of respondents for any of your market research needs.',
     },
     {
-      icon: 'check-circle',
+      icon: '/icons/research.svg',
       title: 'Quality Checks',
       description:
         'Tap into a wide panel of respondents for any of your market research needs.',
