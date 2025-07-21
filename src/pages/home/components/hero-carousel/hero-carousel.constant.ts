@@ -3,7 +3,7 @@ import { HeroCarousel1, HeroCarousel2, HeroCarousel3 } from '@/assets/svgs';
 export const carouselData = [
   {
     imgComponent: HeroCarousel1,
-    label: 'A Fresh Approach to Market\nResearch.',
+    label: 'A new perspective on market\nresearch\n.',
   },
   {
     imgComponent: HeroCarousel2,

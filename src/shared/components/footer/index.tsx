@@ -1,117 +1,91 @@
-// import { useEffect, useRef, useState } from 'react';
-// import './header.style.scss';
-// import { headerDropdownData, navigationItems } from './header.constant';
-// import { CurveIcon, Logo } from '@/assets/svgs';
+import React from 'react';
+import './footer.style.scss';
+import { footerData } from './footer.constant';
 
-// const Footer: React.FC = () => {
-//   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-//   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-//   const dropdownRef = useRef<HTMLDivElement>(null);
-//   const headerRef = useRef<HTMLDivElement>(null);
+const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    // Get the root element that has the scroll
+    const rootElement = document.getElementById('root');
 
-//   useEffect(() => {
-//     const handleClickOutside = (event: MouseEvent) => {
-//       if (
-//         dropdownRef.current &&
-//         !dropdownRef.current.contains(event.target as Node) &&
-//         headerRef.current &&
-//         !headerRef.current.contains(event.target as Node)
-//       ) {
-//         setIsDropdownOpen(false);
-//         setActiveDropdown(null);
-//       }
-//     };
+    if (rootElement) {
+      // Scroll the root element instead of window
+      rootElement.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      // Fallback to window scroll if root not found
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
 
-//     document.addEventListener('mousedown', handleClickOutside);
-//     return () => {
-//       document.removeEventListener('mousedown', handleClickOutside);
-//     };
-//   }, []);
+  return (
+    <footer className="footer">
+      <div className="footer__container">
+        <div className="footer__main">
+          <div className="footer__brand">
+            <div className="">
+              <img
+                src={footerData.logo}
+                alt="Thought Metrics"
+                className="footer__logo"
+                id="footer-logo"
+              />
+              <label htmlFor="footer-logo" className="footer__title">
+                Thought Metrics
+              </label>
+            </div>
 
-//   const handleNavItemClick = (item: string) => {
-//     if (activeDropdown === item) {
-//       setIsDropdownOpen(false);
-//       setActiveDropdown(null);
-//     } else {
-//       setActiveDropdown(item);
-//       setIsDropdownOpen(true);
-//     }
-//   };
+            <div className="footer__social">
+              {footerData.socialLinks.map((social) => (
+                <img
+                  src={social.icon}
+                  alt={social.name}
+                  className="footer__social-icon"
+                />
+              ))}
+            </div>
+          </div>
 
-//   const getActiveSection = () => {
-//     return headerDropdownData.sections.find(
-//       (section) => section.title === activeDropdown
-//     );
-//   };
+          <nav className="footer__nav">
+            {footerData.sections.map((section) => (
+              <div key={section.title} className="footer__section">
+                <h4 className="footer__section-title">{section.title}</h4>
+                <ul className="footer__links">
+                  {section.links.map((link) => (
+                    <li key={link.label} className="footer__link-item">
+                      <a href={link.href} className="footer__link">
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
+        </div>
 
-//   return (
-//     <>
-//       <header
-//         ref={headerRef}
-//         className={`header ${isDropdownOpen ? 'header--active' : ''}`}
-//       >
-//         <nav className="header__nav">
-//           <Logo className="header__logo" />
-//           {navigationItems.map((item) => (
-//             <button
-//               key={item}
-//               className={`header__nav-button ${activeDropdown === item ? 'header__nav-button--active' : ''}`}
-//               onClick={() => handleNavItemClick(item)}
-//             >
-//               {item}
-//               <CurveIcon className="header__nav-arrow" />
-//               <div className="header__nav-beam"></div>
-//             </button>
-//           ))}
-//           <button className="header__action-button header__action-button--primary">
-//             Start Your Research
-//           </button>
-//           <button className="header__action-button header__action-button--secondary">
-//             Join a Paid Focus Group
-//           </button>
-//         </nav>
-//       </header>
+        <div className="footer__bottom">
+          <p className="footer__copyright">{footerData.copyright}</p>
 
-//       {isDropdownOpen && (
-//         <div ref={dropdownRef} className="dropdown">
-//           <div className="dropdown__container">
-//             <div className="dropdown__sidebar">
-//               <p className="dropdown__sidebar-description">
-//                 {headerDropdownData.description}
-//               </p>
-//               <p className="dropdown__sidebar-label">
-//                 {headerDropdownData.label}
-//               </p>
-//             </div>
-//             {getActiveSection() && (
-//               <div className="dropdown__columns">
-//                 {getActiveSection()!.columns.map((column, columnIndex) => (
-//                   <div
-//                     key={columnIndex + 'sub_title'}
-//                     className="dropdown__column"
-//                   >
-//                     {'sub_title' in column && column.sub_title != null && (
-//                       <h4 className="dropdown__column-subtitle">
-//                         {column.sub_title}
-//                       </h4>
-//                     )}
-//                     {column.items.map((item, itemIndex) => (
-//                       <div
-//                         key={itemIndex + item}
-//                         className="dropdown__list-item"
-//                       >
-//                         {item}
-//                       </div>
-//                     ))}
-//                   </div>
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-//         </div>
-//       )}
-//     </>
-//   );
-// };
+          <button
+            className="footer__back-to-top"
+            onClick={scrollToTop}
+            aria-label="Back to top"
+          >
+            <img
+              src={footerData.backToTopIcon}
+              alt="Back to top"
+              className="footer__back-to-top-icon"
+            />
+          </button>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-// export default Footer;
+export default Footer;

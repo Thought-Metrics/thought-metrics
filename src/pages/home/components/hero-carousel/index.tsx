@@ -4,7 +4,7 @@ import { carouselData } from './hero-carousel.constant';
 import { cn } from '@/core/utils/cn';
 
 const HeroCarousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(2);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
