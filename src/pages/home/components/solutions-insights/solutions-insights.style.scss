@@ -1,0 +1,164 @@
+.content-section {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  max-height: 860px;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    max-width: 1536px;
+    display: flex;
+    padding: 3rem 6rem;
+    justify-content: center;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    padding: 2em 1rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__hero {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 1.5em;
+  }
+
+  &__badge {
+    background-color: $accent;
+    color: #000000;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2em;
+    border-radius: 0.25rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    line-height: 1;
+    color: $text-dark;
+    font-weight: 500;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.content-card {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+  position: relative;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  min-height: 18.75rem;
+  width: 16rem;
+
+  &--active {
+    background-color: $primary;
+    color: $white;
+
+    .content-card__icon {
+      color: $white;
+    }
+
+    .content-card__title {
+      color: $white;
+    }
+
+    .content-card__description {
+      color: $white;
+      opacity: 0.9;
+    }
+
+    .content-card__arrow {
+      background-color: $white;
+      color: $primary;
+      .icon {
+        filter: invert(100%);
+      }
+    }
+  }
+
+  &__icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $black;
+    transition: color 300ms ease-in-out;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    transition: color 300ms ease-in-out;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: .85rem;
+    line-height: 1.2;
+    color: #565656;
+    margin: 0;
+    transition: all 300ms ease-in-out;
+    font-weight: 500;
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 72px;
+    height: 38px;
+    border-radius: 3px 0 3px 0;
+    background-color: $primary;
+    color: $white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+  }
+}
