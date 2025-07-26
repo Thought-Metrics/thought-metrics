@@ -1,8 +1,5 @@
-import B2BServices from './components/b2b-services';
-import Blogs from './components/blogs';
-import HeroCarousel from './components/hero-carousel';
-import Industries from './components/industries';
-import SolutionInsights from './components/solutions-insights';
+//Home.tsx
+import { B2BServices, Blogs, HeroCarousel, Industries, SolutionInsights } from './components';
 
 const Home = () => {
   return (

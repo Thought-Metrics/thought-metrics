@@ -9,7 +9,7 @@ export interface FooterSectionData {
 }
 
 export const footerData = {
-  logo: '/icons/stack.svg',
+  logo: '/icons/logo_white.svg',
   socialLinks: [
     {
       name: 'LinkedIn',

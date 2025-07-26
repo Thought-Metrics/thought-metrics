@@ -7,7 +7,7 @@ export const navigationItems = [
 
 export const headerDropdownData = {
   label: 'OVERVIEW',
-  description: 'Understand our approach to B2B\nand B2B research.',
+  description: 'Understand our approach to B2B\nand B2C research.',
   sections: [
     {
       title: 'Research Methods',
@@ -21,9 +21,9 @@ export const headerDropdownData = {
         },
         {
           items: [
-            'Online and Offline Surveys',
+            'Surveys',
             'Focus Group Discussions',
-            'Quality Checks',
+            'Quality Checks and Data Security',
           ],
         },
       ],
@@ -32,42 +32,11 @@ export const headerDropdownData = {
       title: 'Capabilities',
       columns: [
         {
-          sub_title: 'Branding and Advertising Communication',
           items: [
-            'Brand Perception Research',
-            'Brand Awareness Research',
-            'Brand Tracking Research',
-            'Message Testing',
-            'Advertising Effectiveness Research',
-          ],
-        },
-        {
-          sub_title: 'Market Opportunity Research',
-          items: [
-            'Go-to-market Research',
-            'Market Feasibility Study',
-            'Market Entry Research',
-            'Competitive Research',
-          ],
-        },
-        {
-          sub_title: 'Product Research',
-          items: [
-            'Concept Testing Research',
-            'Conjoint Analysis',
-            'MaxDiff Analysis',
-            'Product Validation Testing',
-            'UI/UX Research',
-          ],
-        },
-        {
-          sub_title: 'Customer Research and Segmentation',
-          items: [
-            'Customer Journey Research',
-            'Customer Loyalty Research',
-            'Customer Satisfaction Research',
-            'Persona Research',
-            'Pricing Research',
+            'Branding and Advertising Communication',
+            'Market Opportunity Research',
+            'Product Research',
+            'Customer Research and Segmentation',
           ],
         },
       ],
@@ -86,7 +55,6 @@ export const headerDropdownData = {
         {
           items: [
             'Financial Services and Institutions',
-            'Insurance',
             'Investors',
             'Automotive',
           ],
@@ -106,6 +74,10 @@ export const headerDropdownData = {
       columns: [
         {
           items: ['Articles', 'Reports', 'Case Studies', 'Webinars'],
+        },
+        {
+          sub_title: 'Our Panel',
+          items: [],
         },
       ],
     },

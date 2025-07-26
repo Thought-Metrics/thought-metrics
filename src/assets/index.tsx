@@ -1,12 +1,13 @@
-import './svgs.styles.scss';
+import './svgs.styles.css';
 
 //General and Header SVGs
 import Logo from './logo.svg?react';
 import CurveIcon from './curve-arrow.svg?react';
 import ArrowRight from './right-arrow.svg?react';
 import ArrowUp from './up-arrow.svg?react';
+import StackIllustration from './stack_illustration.svg?react';
 
-export { Logo, CurveIcon, ArrowRight, ArrowUp };
+export { Logo, CurveIcon, ArrowRight, ArrowUp, StackIllustration };
 
 //Hero Carousel SVGs
 import HeroCarousel1 from './hero-carousel-1.svg?react';
@@ -35,3 +36,14 @@ import ResearchIcon from './research.svg?react';
 import StatisticsIcon from './statistics.svg?react';
 
 export { PersonWithPhone, PeopleIcon, ResearchIcon, StatisticsIcon };
+
+//B2B Services SVGs
+import IllustrationSlope from './illustration-slope.svg?react';
+import DoorPerson from './door-person.svg?react';
+import Spiral from './spiral.svg?react';
+import BoxCluster from './box-cluster.svg?react';
+export { IllustrationSlope, DoorPerson, Spiral, BoxCluster };
+
+//Footer
+import LogoWhite from './logo_white.svg?react';
+export { LogoWhite };

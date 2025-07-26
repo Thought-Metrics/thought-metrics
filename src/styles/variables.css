@@ -1,0 +1,107 @@
+/* variables.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import 'tailwindcss';
+
+:root {
+  /* Semantic colors */
+  --primary: #e8505e;
+  --primary-dark: #cf464f;
+  --secondary: #bbfdf5;
+  --accent: #d5fdad;
+  --neutral: #ececec;
+  --surface: #fbeeee;
+  --success: #eaffd6;
+  --info: #ebffd8;
+  --text-dark: #565656;
+  --black: #000000;
+  --white: #ffffff;
+
+  /* Custom colors */
+  --custom-grey: #c1c1c1;
+  --custom-grey-1: #dddddd;
+  --custom-blue: #4c4fa9;
+  --custom-violet: #f2edff;
+  --custom-pink: #ffeaeb;
+
+  /* Shadows */
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /* Custom breakpoints */
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1536px;
+  --breakpoint-wide: 1920px;
+
+  /* Fallback values for browsers that don't support safe areas */
+  --safe-area-inset-top: 0px;
+  --safe-area-inset-right: 0px;
+  --safe-area-inset-bottom: 0px;
+  --safe-area-inset-left: 0px;
+}
+
+@theme {
+  /* Semantic colors */
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-neutral: var(--neutral);
+  --color-surface: var(--surface);
+  --color-success: var(--success);
+  --color-info: var(--info);
+  --color-text-dark: var(--text-dark);
+  --color-black: var(--black);
+  --color-white: var(--white);
+
+  /* Custom colors */
+  --color-custom-blue: var(--custom-blue);
+  --color-custom-grey: var(--custom-grey);
+  --color-custom-grey-1: var(--custom-grey-1);
+  --color-custom-violet: var(--custom-violet);
+  --color-custom-pink: var(--custom-pink);
+
+  /* Custom breakpoints*/
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-xxl: 1536px;
+  --breakpoint-wide: 1920px;
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Animation keyframes */
+  --animate-fadeIn: fadeIn 0.3s ease;
+  --animate-fadeOut: fadeOut 0.3s ease;
+
+  /* Fallback values for browsers that don't support safe areas */
+  --safe-area-inset-top: 0px;
+  --safe-area-inset-right: 0px;
+  --safe-area-inset-bottom: 0px;
+  --safe-area-inset-left: 0px;
+}
+
+@supports (padding: max(0px)) {
+  :root {
+    --safe-area-inset-top: var(--safe-area-inset-top);
+    --safe-area-inset-right: var(--safe-area-inset-right);
+    --safe-area-inset-bottom: var(--safe-area-inset-bottom);
+    --safe-area-inset-left: var(--safe-area-inset-left);
+  }
+}

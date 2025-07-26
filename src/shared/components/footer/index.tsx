@@ -1,20 +1,17 @@
 import React from 'react';
-import './footer.style.scss';
 import { footerData } from './footer.constant';
+import { LogoWhite } from '@/assets';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
-    // Get the root element that has the scroll
     const rootElement = document.getElementById('root');
 
     if (rootElement) {
-      // Scroll the root element instead of window
       rootElement.scrollTo({
         top: 0,
         behavior: 'smooth',
       });
     } else {
-      // Fallback to window scroll if root not found
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
@@ -23,63 +20,60 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="footer">
-      <div className="footer__container">
-        <div className="footer__main">
-          <div className="footer__brand">
-            <div className="">
-              <img
-                src={footerData.logo}
-                alt="Thought Metrics"
-                className="footer__logo"
-                id="footer-logo"
-              />
-              <label htmlFor="footer-logo" className="footer__title">
-                Thought Metrics
-              </label>
-            </div>
-
-            <div className="footer__social">
+    <footer className="w-full bg-primary text-white pt-10">
+      <div className="max-w-[1280px] mx-auto px-6 relative">
+        <div className="w-full grid grid-cols-1 md:grid-cols-5 gap-3 mb-12">
+          {/* Brand Section */}
+          <div className="col-span-1 flex flex-col gap-5 pb-10 md:pb-auto">
+            <LogoWhite className="w-[12rem]" />
+            <div className="flex justify-between w-[12rem]">
               {footerData.socialLinks.map((social) => (
                 <img
+                  key={social.name}
                   src={social.icon}
                   alt={social.name}
-                  className="footer__social-icon"
+                  className="w-10 h-10"
                 />
               ))}
             </div>
           </div>
 
-          <nav className="footer__nav">
-            {footerData.sections.map((section) => (
-              <div key={section.title} className="footer__section">
-                <h4 className="footer__section-title">{section.title}</h4>
-                <ul className="footer__links">
-                  {section.links.map((link) => (
-                    <li key={link.label} className="footer__link-item">
-                      <a href={link.href} className="footer__link">
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </nav>
+          {/* Navigation */}
+          {footerData.sections.map((section) => (
+            <nav key={section.title} className="col-span-1 flex flex-col gap-4">
+              <h4 className="text-xl font-medium text-white m-0">
+                {section.title}
+              </h4>
+              <ul className="list-none p-0 m-0 flex flex-col gap-2">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className={`text-md text-white hover:underline`}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ))}
         </div>
 
-        <div className="footer__bottom">
-          <p className="footer__copyright">{footerData.copyright}</p>
-
+        {/* Bottom Section */}
+        <div className="w-full h-13 relative overflow-hidden border-t border-white/80 flex items-center pl-6">
+          <p className="text-sm text-white opacity-80 m-0">
+            {footerData.copyright}
+          </p>
           <button
-            className="footer__back-to-top"
+            className="w-16 h-12 bg-white/50 border-none rounded-md flex pt-2 justify-center cursor-pointer absolute bottom-[-7px] right-[24px]"
             onClick={scrollToTop}
             aria-label="Back to top"
           >
             <img
               src={footerData.backToTopIcon}
               alt="Back to top"
-              className="footer__back-to-top-icon"
+              className="w-6 h-6 brightness-1 invert"
             />
           </button>
         </div>
