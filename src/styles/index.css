@@ -60,5 +60,5 @@ body {
 }
 
 .common-container {
-  @apply w-full max-w-[1920px];
+  @apply w-full max-w-[1920px] flex justify-center;
 }

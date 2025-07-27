@@ -84,7 +84,7 @@ const Header: React.FC = () => {
           className={`common-container transition-colors duration-300 ease-in-out bg-white ${isDropdownOpen ? 'md:bg-white' : 'md:bg-transparent'}`}
         >
           {/* Desktop View */}
-          <nav className="items-center justify-center flex-nowrap gap-3 xl:gap-4 xxl:gap-6 py-2 xl:py-3.5 xxl:py-4 hidden md:flex">
+          <nav className="flex-nowrap gap-3 xl:gap-4 xxl:gap-6 py-2 xl:py-3.5 xxl:py-4 hidden md:flex">
             <Logo className="w-34 xl:w-45 xxl:w-52" />
             {navigationItems.map((item) => (
               <button
@@ -110,7 +110,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Mobile view */}
-          <nav className="py-4 px-5 items-center justify-between flex md:hidden">
+          <nav className="w-full py-4 px-5 items-center justify-between flex md:hidden">
             <Logo className="w-52" />
             <button
               onClick={toggleMenu}

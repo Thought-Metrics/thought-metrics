@@ -1,6 +1,7 @@
 export interface FooterLinkData {
   label: string;
   href: string;
+  isBold?: string;
 }
 
 export interface FooterSectionData {
@@ -33,10 +34,10 @@ export const footerData = {
       links: [
         { label: 'Qualitative Research', href: '#' },
         { label: 'Quantitative Research', href: '#' },
-        { label: 'Fieldwork', href: '#' },
+        { label: 'Recruitment and Fieldwork', href: '#' },
         { label: 'Surveys', href: '#' },
         { label: 'Focus Group Discussions', href: '#' },
-        { label: 'Quality Checks', href: '#' },
+        { label: 'Quality Checks and Data Security', href: '#' },
       ],
     },
     {
@@ -45,7 +46,7 @@ export const footerData = {
         { label: 'Branding and Advertising Communication', href: '#' },
         { label: 'Market Opportunity Research', href: '#' },
         { label: 'Product Research', href: '#' },
-        { label: 'Consumer Research and Segmentation', href: '#' },
+        { label: 'Customer Research and Segmentation', href: '#' },
       ],
     },
     {
@@ -64,6 +65,7 @@ export const footerData = {
         { label: 'Request a Bid', href: '#' },
         { label: 'Careers', href: '#' },
         { label: 'Contact Us', href: '#' },
+        { label: 'Our Panel', href: '#', isBold: true },
       ],
     },
   ] as FooterSectionData[],
