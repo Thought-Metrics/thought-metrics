@@ -78,33 +78,33 @@ const Header: React.FC = () => {
   };
 
   return (
-    <>
+    <div className='relative'>
       <header ref={headerRef} className="w-full">
         <div
           className={`common-container transition-colors duration-300 ease-in-out bg-white ${isDropdownOpen ? 'md:bg-white' : 'md:bg-transparent'}`}
         >
           {/* Desktop View */}
-          <nav className="items-center justify-center flex-nowrap gap-6 py-2 xxl:py-4 hidden md:flex">
-            <Logo className="w-34 xxl:w-52" />
+          <nav className="items-center justify-center flex-nowrap gap-3 xl:gap-4 xxl:gap-6 py-2 xl:py-3.5 xxl:py-4 hidden md:flex">
+            <Logo className="w-34 xl:w-45 xxl:w-52" />
             {navigationItems.map((item) => (
               <button
                 key={item}
-                className={`relative text-[12px] xxl:text-lg text-text-dark font-medium cursor-pointer flex items-center gap-[0.3rem] transition-all duration-300 ease-in-out whitespace-nowrap ${activeDropdown !== item && 'hover:underline hover:underline-offset-2'}`}
+                className={`relative text-[12px] xl:text-md xxl:text-lg text-text-dark font-medium cursor-pointer flex items-center gap-[0.3rem] transition-all duration-300 ease-in-out whitespace-nowrap ${activeDropdown !== item && 'hover:underline hover:underline-offset-2'}`}
                 onClick={() => handleNavItemClick(item)}
               >
                 {item}
                 <CurveIcon
-                  className={`w-[8px] xxl:text-base transition-transform duration-300 ease-in-out ${activeDropdown === item ? 'rotate-180' : ''}`}
+                  className={`w-[8px] xl:w-[10px] xxl:w-[12px] transition-transform duration-300 ease-in-out ${activeDropdown === item ? 'rotate-180' : ''}`}
                 />
                 <div
-                  className={`absolute -bottom-[12px] xxl:-bottom-[20px] -left-[2px] bg-primary h-[3px] xxl:h-[5px] w-full rounded-t ${activeDropdown === item ? 'block animate-fadeIn' : 'hidden animate-fadeOut'}`}
+                  className={`absolute -bottom-[12px] xl:-bottom-[16px] xxl:-bottom-[20px] -left-[2px] bg-primary h-[3px] xl:h-[4px] xxl:h-[5px] w-full rounded-t ${activeDropdown === item ? 'block animate-fadeIn' : 'hidden animate-fadeOut'}`}
                 ></div>
               </button>
             ))}
-            <button className="py-0.5 px-4 xxl:py-1 xxl:px-4 border-[1px] xxl:border-[1.5px] text-[11px] xxl:text-base xxl:font-medium cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap border-primary bg-white text-primary hover:text-custom-blue hover:border-custom-blue">
+            <button className="py-0.5 xl:py-[3px] xxl:py-1 px-4 text-[11px] xl:text-sm xxl:text-base border-[1px] xl:border-[1.25px] xxl:border-[1.5px] font-medium cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap border-primary bg-white text-primary hover:text-custom-blue hover:border-custom-blue">
               Start Your Research
             </button>
-            <button className="py-0.5 px-4 xxl:py-1 xxl:px-4 border-[1px] xxl:border-[1.5px] text-[11px] xxl:text-base xxl:font-medium cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap bg-primary text-white hover:bg-custom-blue hover:border-custom-blue">
+            <button className="py-0.5 xl:py-[3px] xxl:py-1 px-4 text-[11px] xl:text-sm xxl:text-base font-medium cursor-pointer transition-all duration-300 ease-in-out whitespace-nowrap bg-primary text-white hover:bg-custom-blue hover:border-custom-blue">
               Join a Paid Focus Group
             </button>
           </nav>
@@ -147,9 +147,9 @@ const Header: React.FC = () => {
           ref={dropdownRef}
           className="absolute left-0 right-0 bg-primary shadow-[0_4px_20px_rgba(0,0,0,0.1)] z-[999] animate-fadeIn hidden md:block text-white"
         >
-          <div className="relative flex px-10 py-12  items-center gap-13">
-            <div className="flex flex-col gap-3">
-              <p className="text-lg leading-[1.25] font-light whitespace-nowrap tracking-wider">
+          <div className="relative flex px-7 py-8 xl:px-9 xxl:px-10 xl:py-10 xxl:py-12 items-center gap-8 xl:gap-11 xxl:gap-13">
+            <div className="flex flex-col gap-1 xl:gap-3.5">
+              <p className="text-xxs xl:text-sm xxl:text-lg leading-[1.25] font-light whitespace-nowrap tracking-wider">
                 {headerDropdownData.description.split('\n').map((line, idx) => (
                   <React.Fragment key={idx + 'label'}>
                     {line}
@@ -157,19 +157,19 @@ const Header: React.FC = () => {
                   </React.Fragment>
                 ))}
               </p>
-              <p className="text-lg font-medium underline tracking-wider">
+              <p className="text-xs xl:text-md xxl:text-lg font-medium underline tracking-wider">
                 {headerDropdownData.label}
               </p>
             </div>
             {getActiveSection() && (
-              <div className="flex gap-13">
+              <div className="flex gap-7 xl:gap-10 xxl:gap-13">
                 {getActiveSection()!.columns.map((column, columnIndex) => (
                   <div
                     key={columnIndex + 'sub_title'}
-                    className="flex flex-col gap-2"
+                    className="flex flex-col gap-0.5 xl:gap-2"
                   >
                     {'sub_title' in column && column.sub_title != null && (
-                      <h4 className="text-xl font-medium hover:underline cursor-pointer tracking-wider">
+                      <h4 className="text-sm xl:text-md xxl:text-xl font-medium hover:underline cursor-pointer tracking-wider">
                         {column.sub_title}
                       </h4>
                     )}
@@ -177,7 +177,7 @@ const Header: React.FC = () => {
                       column.items.map((item, itemIndex) => (
                         <div
                           key={itemIndex + item}
-                          className="text-lg font-medium hover:underline cursor-pointer tracking-wider"
+                          className="text-xxs xl:text-sm xxl:text-lg font-medium hover:underline cursor-pointer tracking-wider"
                         >
                           {item}
                         </div>
@@ -187,7 +187,7 @@ const Header: React.FC = () => {
               </div>
             )}
             <div className="absolute right-0 pr-13">
-            <StackIllustration />
+            <StackIllustration className='w-21 xl:w-25 xxl:w-32' />
             </div>
           </div>
         </div>
@@ -287,7 +287,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
