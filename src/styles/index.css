@@ -59,6 +59,10 @@ body {
   box-sizing: border-box;
 }
 
+.common-component {
+  @apply w-full flex justify-center;
+}
+
 .common-container {
-  @apply w-full max-w-[1920px] flex justify-center;
+  @apply w-full max-w-[1920px] flex;
 }

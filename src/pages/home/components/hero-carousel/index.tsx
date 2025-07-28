@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { carouselData } from './hero-carousel.constant';
 import { cn } from '@/core/utils/cn';
+import { HeroCarousel1 } from '@/assets';
 
 const HeroCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -33,12 +34,13 @@ const HeroCarousel: React.FC = () => {
   };
 
   return (
-    <section className="h-[75vh] w-full flex justify-center min-h-[640px]">
-      <div className="w-full h-full relative items-center max-w-[1536px]">
-        <div className="flex gap-20 justify-center w-full h-full">
+    <section className="common-component">
+      {/* Desktop View */}
+      <div className="common-container relative !hidden md:!block w-full">
+        <div className="grid grid-cols-2 gap-20 w-full min-h-[27rem] xl:min-h-[32rem] xxl:min-h-[40rem]">
           <div
             className={cn(
-              'relative w-[40%] h-full flex items-center justify-center',
+              'relative h-full flex items-end justify-center',
               isTransitioning ? 'animate-fadeOut' : 'animate-fadeIn'
             )}
           >
@@ -48,8 +50,9 @@ const HeroCarousel: React.FC = () => {
                 <ImgComponent
                   className={cn(
                     'w-full h-full object-contain scale-100',
-                    currentIndex == 0 ? 'p-[4.5rem] pl-0' : '',
-                    currentIndex == 1 ? 'p-12 pl-0' : ''
+                    currentIndex == 0 ? 'p-[4rem] h-[38rem] pr-0' : '',
+                    currentIndex == 1 ? 'p-[3rem] h-[35rem] pr-0' : '',
+                    currentIndex == 2 ? 'p-0 h-[35rem]' : '',
                   )}
                 />
               ) : null;
@@ -90,6 +93,32 @@ const HeroCarousel: React.FC = () => {
             />
           ))}
         </div>
+      </div>
+      {/* Mobile View */}
+      <div className="common-container flex-col gap-4 md:!hidden px-6 py-8 !justify-start">
+        <div
+          className={cn(
+            'text-3xl font-bold text-black',
+            isTransitioning ? 'animate-fadeOut' : 'animate-fadeIn'
+          )}
+        >
+          {carouselData[0]?.mobileLabel.split('\n').map((line, idx) => (
+            <p key={idx + 'label'}>
+              {line.split('.').flatMap((part, i, arr) => [
+                part,
+                i < arr.length - 1 && (
+                  <span key={i + 'label'} className="text-primary">
+                    .
+                  </span>
+                ),
+              ])}
+            </p>
+          ))}
+        </div>
+        <button className="bg-primary text-white font-bold rounded text-xl text-nowrap py-1 w-45">
+          <label htmlFor="">{carouselData[0].buttonLabel}</label>
+        </button>
+        <HeroCarousel1 className="pt-10 w-full h-70 object-contain scale-100 py-0" />
       </div>
     </section>
   );
