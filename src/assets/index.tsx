@@ -6,8 +6,16 @@ import CurveIcon from './curve-arrow.svg?react';
 import ArrowRight from './right-arrow.svg?react';
 import ArrowUp from './up-arrow.svg?react';
 import StackIllustration from './stack_illustration.svg?react';
+import ArrowRightRed from './right-arrow-red.svg?react';
 
-export { Logo, CurveIcon, ArrowRight, ArrowUp, StackIllustration };
+export {
+  Logo,
+  CurveIcon,
+  ArrowRight,
+  ArrowUp,
+  StackIllustration,
+  ArrowRightRed,
+};
 
 //Hero Carousel SVGs
 import HeroCarousel1 from './hero-carousel-1.svg?react';

@@ -12,7 +12,7 @@ const Industries: React.FC = () => {
 
   return (
     <section className="common-component bg-white">
-      <div className="common-container p-4 md:px-24 md:py-12 justify-center flex-col !max-w-[1336px]">
+      <div className="!hidden md:!flex common-container p-4 md:px-24 md:py-12 justify-center flex-col !max-w-[1336px]">
         <h2 className="text-[1.1rem] md:text-3xl font-semibold leading-[1.25] text-black tracking-normal">
           {industryData.mainTitle}
         </h2>
@@ -50,10 +50,10 @@ const Industries: React.FC = () => {
                 </div>
               </div>
 
-              <div className="w-6 h-8 md:w-10 md:h-10 absolute left-4 bottom-4 md:left-10 md:bottom-10 rounded-full bg-primary flex items-center justify-center text-xxs font-bold">
+              <div className="w-6 h-8 md:w-10 md:h-10 absolute left-4 bottom-4 md:left-10 md:bottom-10 rounded-full bg-primary flex items-center justify-center text-xxs md:text-sm font-bold">
                 {activeTab.tabNumber}
               </div>
-              <div className="h-8 px-4 md:h-10 md:px-8 absolute right-4 bottom-4 md:right-10 md:bottom-10 rounded-md bg-primary flex items-center justify-center text-xxs font-bold">
+              <div className="h-8 px-4 md:h-10 md:px-8 absolute right-4 bottom-4 md:right-10 md:bottom-10 rounded-md bg-primary flex items-center justify-center text-xxs md:text-sm font-bold">
                 See More
               </div>
             </div>

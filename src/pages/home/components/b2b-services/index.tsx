@@ -120,15 +120,6 @@ const B2BServices: React.FC = () => {
         {/* Mobile View */}
         <div className="w-full h-auto flex overflow-y-hidden overflow-x-scroll md:hidden gap-3 pt-6 text-black">
           <div className="shrink-0 w-70 h-80 relative col-span-1 bg-success rounded-md flex flex-col justify-center py-10 px-7">
-            {(() => {
-              const ServiceIllustration =
-                contentSecondData.services[0].illustration;
-              return ServiceIllustration ? (
-                <ServiceIllustration
-                  className={`${contentSecondData.services[0].className} !w-[90%]`}
-                />
-              ) : null;
-            })()}
             <div className="w-full flex flex-col gap-2 z-1">
               <h3 className="w-[90%] leading-[1.2] font-semibold">
                 {contentSecondData.services[0].title}
@@ -142,13 +133,6 @@ const B2BServices: React.FC = () => {
             </div>
           </div>
           <div className="shrink-0 w-70 h-80 relative col-span-1 bg-gradient-to-r from-custom-violet to-white rounded-md flex flex-col justify-center py-10 px-7">
-            {(() => {
-              const ServiceIllustration =
-                contentSecondData.services[1].illustration;
-              return ServiceIllustration ? (
-                <ServiceIllustration className="absolute right-0 bottom-2 h-[50%]" />
-              ) : null;
-            })()}
             <div className="w-full flex flex-col gap-2 z-1">
               <h3 className="w-[90%] leading-[1.2] font-semibold">
                 {contentSecondData.services[1].title}
@@ -162,15 +146,6 @@ const B2BServices: React.FC = () => {
             </div>
           </div>
           <div className="shrink-0 w-70 h-80 relative col-span-1 bg-gradient-to-r from-custom-grey-1 to-white rounded-md flex flex-col justify-center py-10 px-7">
-            {(() => {
-              const ServiceIllustration =
-                contentSecondData.services[2].illustration;
-              return ServiceIllustration ? (
-                <ServiceIllustration
-                  className={contentSecondData.services[2].className}
-                />
-              ) : null;
-            })()}
             <div className="w-full flex flex-col gap-2 z-1">
               <h3 className="w-[90%] leading-[1.2] font-semibold">
                 {contentSecondData.services[2].title}
@@ -184,20 +159,6 @@ const B2BServices: React.FC = () => {
             </div>
           </div>
           <div className="shrink-0 w-70 h-80 relative col-span-1 bg-custom-pink rounded-md flex flex-col justify-center py-10 px-7">
-            {(() => {
-              const ServiceIllustration =
-                contentSecondData.services[3].illustration;
-              return ServiceIllustration ? (
-                <>
-                  <ServiceIllustration
-                    className={contentSecondData.services[3].className}
-                  />
-                  <ServiceIllustration
-                    className={contentSecondData.services[3].className1}
-                  />
-                </>
-              ) : null;
-            })()}
             <div className="w-full flex flex-col gap-2 z-1">
               <h3 className="w-[90%] leading-[1.2] font-semibold">
                 {contentSecondData.services[3].title}
