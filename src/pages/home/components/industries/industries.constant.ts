@@ -8,6 +8,8 @@ export interface IndustryTabData {
   image: string;
   imageAlt: string;
   tabNumber: string;
+  isMobile: boolean;
+  shortTitle?: string;
 }
 
 export const industryData = {
@@ -44,6 +46,7 @@ export const industryData = {
       image: '/illustrations/illustration-retailer.svg',
       imageAlt: 'Retail store interior',
       tabNumber: '02',
+      shortTitle: 'Retail',
     },
     {
       id: 'financial-services',
@@ -76,6 +79,7 @@ export const industryData = {
       image: '/illustrations/illustration-insurance.svg',
       imageAlt: 'Person signing home insurance policy document',
       tabNumber: '04',
+      isMobile: true,
     },
     {
       id: 'investors',
@@ -155,6 +159,7 @@ export const industryData = {
       image: '/illustrations/illustration-advertising.svg',
       imageAlt: 'Crowded Times Square with advertising billboards',
       tabNumber: '09',
+      shortTitle: 'Advertising',
     },
     {
       id: 'human-resources',
@@ -203,6 +208,7 @@ export const industryData = {
       image: '/illustrations/illustration-parma.svg',
       imageAlt: 'Healthcare consultation',
       tabNumber: '12',
+      shortTitle: 'Healthcare',
     },
   ] as IndustryTabData[],
 };

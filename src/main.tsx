@@ -7,6 +7,9 @@ import './styles/variables.css'; // Theme variables first
 import './styles/index.css'; // Global styles
 import './styles/animations.css'; // Animations
 
+import { register } from 'swiper/element/bundle';
+register();
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <App />

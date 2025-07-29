@@ -84,7 +84,7 @@ const Header: React.FC = () => {
           className={`common-container justify-center transition-colors duration-300 ease-in-out bg-white ${isDropdownOpen ? 'md:bg-white' : 'md:bg-transparent'}`}
         >
           {/* Desktop View */}
-          <nav className="flex-nowrap gap-3 xl:gap-4 xxl:gap-6 py-2 xl:py-3.5 xxl:py-4 hidden md:flex items-center">
+          <nav className="flex-nowrap gap-3 xl:gap-4 xxl:gap-6 wide:gap-5 py-2 xl:py-3.5 xxl:py-4 hidden md:flex items-center">
             <Logo className="w-34 xl:w-45 xxl:w-52" />
             {navigationItems.map((item) => (
               <button

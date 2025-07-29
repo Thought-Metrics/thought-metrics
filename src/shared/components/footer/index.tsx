@@ -20,8 +20,8 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="common-component bg-primary pb-12 xl:pb-16 pt-4 xl:pt-6 xxl:pt-10 relative text-white">
-      <div className="common-container justify-center px-6 flex-col md:flex-row gap-6 xl:gap-8 xxl:gap-12">
+    <footer className="common-component bg-primary pb-12 xl:pb-16 pt-4 xl:pt-6 xxl:pt-10 text-white relative">
+      <div className="common-container justify-center px-6 flex-col md:flex-row gap-6 xl:gap-8 xxl:gap-10">
         {/* Brand Section */}
         <div className="w-30 xl:w-40 xxl:w-48 gap-1 xl:gap-3 xxl:gap-5 flex flex-col md:pb-auto">
           <LogoWhite className="w-full" />
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Navigation */}
-        <div className="grid grid-cols-2 md:flex gap-6 xl:gap-8 xxl:gap-12">
+        <div className="grid grid-cols-2 md:flex gap-6 xl:gap-8 xxl:gap-10">
           {footerData.sections.map((section) => (
             <nav
               key={section.title}
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
 
         {/* Bottom Section */}
         <div className="common-component absolute w-full bottom-0 left-0">
-          <div className="relative common-container !justify-start overflow-hidden border-t border-white py-1.5 xl:py-3 px-6 md:px-28">
+          <div className="relative common-container !justify-start overflow-hidden border-t border-white py-1.5 xl:py-3 px-6 md:px-28 xxl:px-45 wide:px-90">
             <p className="text-xxs xxl:text-base opacity-80 m-0">
               {footerData.copyright}
             </p>

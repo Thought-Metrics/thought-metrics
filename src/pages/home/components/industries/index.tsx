@@ -11,32 +11,28 @@ const Industries: React.FC = () => {
   };
 
   return (
-    <section className="bg-white h-full w-full flex justify-center min-h-[860px]">
-      <div className="w-full h-full relative max-w-[1536px] flex px-24 py-20 justify-center flex-col">
-        <h2 className="text-[1.75rem] font-semibold leading-[1.25] text-black tracking-normal">
+    <section className="common-component bg-white">
+      <div className="common-container p-4 md:px-24 md:py-12 justify-center flex-col !max-w-[1336px]">
+        <h2 className="text-[1.1rem] md:text-3xl font-semibold leading-[1.25] text-black tracking-normal">
           {industryData.mainTitle}
         </h2>
 
-        <div className="w-full h-full pt-6 flex gap-3">
-          <div className="w-[70%] text-black">
+        <div className="w-full min-h-[360px] md:min-h-[640px] pt-6 flex gap-3">
+          <div className="w-[67%] md:w-[75%] h-full text-black">
             <div
               key={activeTab.title} // This forces re-render on tab change
-              className="border border-black rounded-sm px-[3.25rem] relative flex flex-col gap-6 justify-center w-full h-full"
+              className="flex border border-black rounded-sm px-3 py-4 md:px-[3.25rem] relative flex-col gap-6 justify-center w-full h-full"
             >
-              <h3 className="font-bold text-xl animate-fadeIn">
+              <h3 className="hidden md:block font-bold text-xl animate-fadeIn">
                 {activeTab.title}
               </h3>
 
-              <div className="flex w-full justify-between animate-fadeIn">
-                <div className="flex flex-col gap-1 w-[45%]">
-                  <h4 className="text-base leading-none font-semibold">
-                    {activeTab.subtitle}
-                  </h4>
-                  <p className="text-base leading-none">
-                    {activeTab.description}
-                  </p>
+              <div className="flex w-full justify-between animate-fadeIn text-xxs md:text-base leading-none">
+                <div className="flex flex-col gap-1 md:w-[45%]">
+                  <h4 className="font-semibold">{activeTab.subtitle}</h4>
+                  <p>{activeTab.description}</p>
 
-                  <ul className="text-base leading-[1.2em] list-disc pl-7 space-y-1">
+                  <ul className="leading-[1.2em] list-disc pl-4 md:pl-7 space-y-2">
                     {activeTab.bulletPoints.map((point, index) => (
                       <li key={index + point} className="">
                         {point}
@@ -45,7 +41,7 @@ const Industries: React.FC = () => {
                   </ul>
                 </div>
 
-                <div className="w-[45%]">
+                <div className="hidden md:block w-[45%]">
                   <img
                     src={activeTab.image}
                     alt={activeTab.imageAlt}
@@ -54,27 +50,32 @@ const Industries: React.FC = () => {
                 </div>
               </div>
 
-              <div className="w-10 h-10 absolute left-10 bottom-10 rounded-full bg-primary flex items-center justify-center text-sm font-bold">
+              <div className="w-6 h-8 md:w-10 md:h-10 absolute left-4 bottom-4 md:left-10 md:bottom-10 rounded-full bg-primary flex items-center justify-center text-xxs font-bold">
                 {activeTab.tabNumber}
               </div>
-              <div className="h-10 px-8 absolute right-10 bottom-10 rounded-md bg-primary flex items-center justify-center text-sm font-bold">
+              <div className="h-8 px-4 md:h-10 md:px-8 absolute right-4 bottom-4 md:right-10 md:bottom-10 rounded-md bg-primary flex items-center justify-center text-xxs font-bold">
                 See More
               </div>
             </div>
           </div>
 
-          <div className="w-[30%] flex flex-col justify-between xl:px-6 lg:px-3 text-black font-semibold">
+          <div className="w-[33%] md:w-[25%] flex flex-col justify-between text-black font-semibold text-xs md:text-base">
             {industryData.industries.map((industry) => (
               <button
                 key={industry.id}
-                className={`bg-neutral px-3 py-2 rounded hover:bg-primary hover:shadow-md hover:shadow-primary/50 ${
+                className={`bg-neutral px-2 py-1.5 md:py-2 rounded hover:bg-primary hover:shadow-md hover:shadow-primary/50 ${
                   activeTab.id === industry.id
                     ? 'bg-primary shadow-md shadow-primary/50'
                     : ''
-                }`}
+                } ${industry.isMobile && 'hidden md:block'}`}
                 onClick={() => handleTabClick(industry)}
               >
-                <span>{industry.label}</span>
+                <span className={`${industry.shortTitle && 'hidden md:block'}`}>
+                  {industry.label}
+                </span>
+                {industry.shortTitle && (
+                  <span className="md:hidden">{industry.shortTitle}</span>
+                )}
               </button>
             ))}
           </div>

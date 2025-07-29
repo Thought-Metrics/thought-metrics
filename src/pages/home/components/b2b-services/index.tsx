@@ -1,30 +1,33 @@
 import React from 'react';
 import { contentSecondData } from './b2bservices.constant';
-import {
-  ArrowRight,
-  BoxCluster,
-  DoorPerson,
-  IllustrationSlope,
-  Spiral,
-} from '@/assets';
+import { ArrowRight } from '@/assets';
 
 const B2BServices: React.FC = () => {
   return (
-    <section className="bg-neutral w-full flex justify-center min-h-[860px]">
-      <div className="w-full relative max-w-[1536px] flex px-24 py-12 justify-center flex-col">
-        <h2 className="text-[1.75rem] font-semibold leading-[1.25] text-black tracking-normal">
+    <section className="common-component bg-neutral">
+      <div className="common-container px-6 py-8 md:px-24 md:py-12 justify-center flex-col !max-w-[1336px]">
+        <h2 className="text-[1.1rem] md:text-3xl font-semibold leading-[1.25] text-black tracking-normal md:w-[85%]">
           {contentSecondData.mainTitle}
         </h2>
-        <div className="grid grid-cols-1 w-full md:grid-cols-3  md:grid-rows-2 gap-3 pt-6 text-black">
+        {/* Desktop View */}
+        <div className="hidden md:grid grid-cols-1 w-full md:grid-cols-3  md:grid-rows-2 gap-3 pt-6 text-black">
           {/* Service 1 */}
-          <div className="relative col-span-1 bg-success rounded-md flex flex-col justify-center py-6 px-9 overflow-hidden">
-            <IllustrationSlope className="absolute right-0 bottom-0 w-[70%]" />
-            <div className="w-[60%] flex flex-col gap-2 z-1">
-              <h3 className="leading-[1.2] font-semibold">
-                {contentSecondData.service1.title}
+          <div className="relative col-span-1 bg-success rounded-md flex flex-col justify-center py-9 px-12 overflow-hidden">
+            {(() => {
+              const IllustrationSlope =
+                contentSecondData.services[0].illustration;
+              return IllustrationSlope ? (
+                <IllustrationSlope
+                  className={contentSecondData.services[0].className}
+                />
+              ) : null;
+            })()}
+            <div className="w-[72%] flex flex-col gap-2 z-1">
+              <h3 className="w-[90%] leading-[1.2] font-semibold">
+                {contentSecondData.services[0].title}
               </h3>
               <p className="tracking-tight leading-[1.2]">
-                {contentSecondData.service1.description}
+                {contentSecondData.services[0].description}
               </p>
               <div className="py-2">
                 <ArrowRight />
@@ -33,61 +36,179 @@ const B2BServices: React.FC = () => {
           </div>
 
           {/* Service 2 */}
-          <div className="relative col-span-2 bg-gradient-to-r from-custom-violet to-white rounded-md flex flex-col py-6 px-9 overflow-hidden">
-            <div className="w-[55%] flex flex-col gap-2">
+          <div className="relative col-span-2 bg-gradient-to-r from-custom-violet to-white rounded-md flex flex-col py-9 px-12 overflow-hidden">
+            <div className="w-[52%] flex flex-col gap-2">
               <h3 className="w-[50%] leading-[1.2] font-semibold">
-                {contentSecondData.service2.title}
+                {contentSecondData.services[1].title}
               </h3>
               <p className="tracking-tight leading-[1.2]">
-                {contentSecondData.service2.description}
+                {contentSecondData.services[1].description}
               </p>
               <div
                 className="py-2"
-                aria-label={`Learn more about ${contentSecondData.service2.title}`}
+                aria-label={`Learn more about ${contentSecondData.services[1].title}`}
               >
                 <ArrowRight />
               </div>
             </div>
-            <DoorPerson className="absolute top-1/2 right-0 transform -translate-y-1/2 h-[80%]" />
+            {(() => {
+              const DoorPerson = contentSecondData.services[1].illustration;
+              return DoorPerson ? (
+                <DoorPerson
+                  className={contentSecondData.services[1].className}
+                />
+              ) : null;
+            })()}
           </div>
 
           {/* Service 3 */}
-          <div className="relative col-span-2 bg-gradient-to-r from-custom-grey-1 to-white rounded-md flex flex-col justify-center py-6 px-9 overflow-hidden">
-            <div className="w-[55%] flex flex-col gap-2">
-              <h3 className="w-[40%] leading-[1.2] font-semibold">
-                {contentSecondData.service3.title}
+          <div className="relative col-span-2 bg-gradient-to-r from-custom-grey-1 to-white rounded-md flex flex-col justify-center py-9 px-12 overflow-hidden">
+            <div className="w-[60%] flex flex-col gap-2">
+              <h3 className="w-[35%] leading-[1.2] font-semibold">
+                {contentSecondData.services[2].title}
               </h3>
               <p className="tracking-tight leading-[1.2]">
-                {contentSecondData.service3.description}
+                {contentSecondData.services[2].description}
               </p>
               <div
                 className="py-2"
-                aria-label={`Learn more about ${contentSecondData.service3.title}`}
+                aria-label={`Learn more about ${contentSecondData.services[2].title}`}
               >
                 <ArrowRight />
               </div>
             </div>
-            <Spiral className="absolute top-1/2 right-0 transform -translate-y-1/2 h-[90%]" />
+            {(() => {
+              const Spiral = contentSecondData.services[2].illustration;
+              return Spiral ? (
+                <Spiral className={contentSecondData.services[2].className} />
+              ) : null;
+            })()}
           </div>
 
           {/* Service 4 */}
-          <div className="relative col-span-1 bg-custom-pink rounded-md flex flex-col justify-center py-6 px-9 overflow-hidden">
-            <div className="w-[60%] flex flex-col gap-2">
+          <div className="relative col-span-1 bg-custom-pink rounded-md flex flex-col justify-center py-9 px-12 overflow-hidden">
+            <div className="w-[95%] flex flex-col gap-2">
               <h3 className="leading-[1.2] font-semibold">
-                {contentSecondData.service4.title}
+                {contentSecondData.services[3].title}
               </h3>
               <p className="tracking-tight leading-[1.2]">
-                {contentSecondData.service4.description}
+                {contentSecondData.services[3].description}
               </p>
               <div
                 className="py-2"
-                aria-label={`Learn more about ${contentSecondData.service4.title}`}
+                aria-label={`Learn more about ${contentSecondData.services[3].title}`}
               >
                 <ArrowRight />
               </div>
             </div>
-            <BoxCluster className="absolute right-8 top-8" />
-            <BoxCluster className="absolute right-10 bottom-8 w-[25%] h-[25%]" />
+            {(() => {
+              const BoxCluster = contentSecondData.services[3].illustration;
+              return BoxCluster ? (
+                <>
+                  <BoxCluster
+                    className={contentSecondData.services[3].className}
+                  />
+                  <BoxCluster
+                    className={contentSecondData.services[3].className1}
+                  />
+                </>
+              ) : null;
+            })()}
+          </div>
+        </div>
+
+        {/* Mobile View */}
+        <div className="w-full h-auto flex overflow-y-hidden overflow-x-scroll md:hidden gap-3 pt-6 text-black">
+          <div className="shrink-0 w-70 h-80 relative col-span-1 bg-success rounded-md flex flex-col justify-center py-10 px-7">
+            {(() => {
+              const ServiceIllustration =
+                contentSecondData.services[0].illustration;
+              return ServiceIllustration ? (
+                <ServiceIllustration
+                  className={`${contentSecondData.services[0].className} !w-[90%]`}
+                />
+              ) : null;
+            })()}
+            <div className="w-full flex flex-col gap-2 z-1">
+              <h3 className="w-[90%] leading-[1.2] font-semibold">
+                {contentSecondData.services[0].title}
+              </h3>
+              <p className="text-sm tracking-tight leading-[1.2]">
+                {contentSecondData.services[0].description}
+              </p>
+              <div className="py-2">
+                <ArrowRight />
+              </div>
+            </div>
+          </div>
+          <div className="shrink-0 w-70 h-80 relative col-span-1 bg-gradient-to-r from-custom-violet to-white rounded-md flex flex-col justify-center py-10 px-7">
+            {(() => {
+              const ServiceIllustration =
+                contentSecondData.services[1].illustration;
+              return ServiceIllustration ? (
+                <ServiceIllustration className="absolute right-0 bottom-2 h-[50%]" />
+              ) : null;
+            })()}
+            <div className="w-full flex flex-col gap-2 z-1">
+              <h3 className="w-[90%] leading-[1.2] font-semibold">
+                {contentSecondData.services[1].title}
+              </h3>
+              <p className="text-sm tracking-tight leading-[1.2]">
+                {contentSecondData.services[1].description}
+              </p>
+              <div className="py-2">
+                <ArrowRight />
+              </div>
+            </div>
+          </div>
+          <div className="shrink-0 w-70 h-80 relative col-span-1 bg-gradient-to-r from-custom-grey-1 to-white rounded-md flex flex-col justify-center py-10 px-7">
+            {(() => {
+              const ServiceIllustration =
+                contentSecondData.services[2].illustration;
+              return ServiceIllustration ? (
+                <ServiceIllustration
+                  className={contentSecondData.services[2].className}
+                />
+              ) : null;
+            })()}
+            <div className="w-full flex flex-col gap-2 z-1">
+              <h3 className="w-[90%] leading-[1.2] font-semibold">
+                {contentSecondData.services[2].title}
+              </h3>
+              <p className="text-sm tracking-tight leading-[1.2]">
+                {contentSecondData.services[2].description}
+              </p>
+              <div className="py-2">
+                <ArrowRight />
+              </div>
+            </div>
+          </div>
+          <div className="shrink-0 w-70 h-80 relative col-span-1 bg-custom-pink rounded-md flex flex-col justify-center py-10 px-7">
+            {(() => {
+              const ServiceIllustration =
+                contentSecondData.services[3].illustration;
+              return ServiceIllustration ? (
+                <>
+                  <ServiceIllustration
+                    className={contentSecondData.services[3].className}
+                  />
+                  <ServiceIllustration
+                    className={contentSecondData.services[3].className1}
+                  />
+                </>
+              ) : null;
+            })()}
+            <div className="w-full flex flex-col gap-2 z-1">
+              <h3 className="w-[90%] leading-[1.2] font-semibold">
+                {contentSecondData.services[3].title}
+              </h3>
+              <p className="text-sm tracking-tight leading-[1.2]">
+                {contentSecondData.services[3].description}
+              </p>
+              <div className="py-2">
+                <ArrowRight />
+              </div>
+            </div>
           </div>
         </div>
       </div>
