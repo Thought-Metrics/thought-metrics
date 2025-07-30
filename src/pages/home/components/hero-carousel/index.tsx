@@ -33,7 +33,7 @@ const HeroCarousel: React.FC = () => {
               key={index + item.label}
               className="!flex !items-stretch"
             >
-              <div className="grid grid-cols-2 w-full h-full">
+              <div className="grid grid-cols-[48%_52%] w-full h-full">
                 {/* Image Section */}
                 <div className="relative h-full w-full flex items-center justify-end">
                   {(() => {
@@ -41,10 +41,10 @@ const HeroCarousel: React.FC = () => {
                     return ImgComponent ? (
                       <ImgComponent
                         className={cn(
-                          'xxl:w-[45rem] wide:w-[55rem] h-full object-contain scale-100',
-                          index === 0 ? 'p-[4rem] max-h-[25rem] xxl:max-h-[33rem] wide:max-w-[45rem] wide:max-h-[35rem] pr-0' : '',
+                          'w-full xl:w-[38rem] xxl:w-[45rem] wide:w-[55rem] h-full object-contain scale-100',
+                          index === 0 ? 'p-[4rem] max-h-[25rem] xl:max-h-[28rem] xxl:max-h-[33rem] wide:max-w-[45rem] wide:max-h-[35rem] pr-0' : '',
                           index === 1
-                            ? 'p-[3rem] max-h-[25rem] xxl:max-h-[36rem] wide:w-[45rem] wide:min-h-[35rem] pr-0'
+                            ? 'p-[3rem] max-h-[25rem] xl:max-h-[30rem] xxl:max-h-[37rem] wide:w-[45rem] wide:min-h-[40rem] pr-0'
                             : ''
                         )}
                       />
@@ -54,7 +54,7 @@ const HeroCarousel: React.FC = () => {
 
                 {/* Text Section */}
                 <div className="flex items-center justify-start">
-                  <div className="text-3xl xxl:text-[3rem] wide:text-5xl font-bold text-black">
+                  <div className="text-3xl xl:text-4xl xxl:text-[3rem] wide:text-5xl font-bold text-black">
                     {item.label.split('\n').map((line, idx) => (
                       <p key={idx + 'label'}>
                         {line.split('.').flatMap((part, i, arr) => [
@@ -75,7 +75,7 @@ const HeroCarousel: React.FC = () => {
         </Swiper>
 
         {/* Custom Pagination */}
-        <div className="custom-pagination absolute flex gap-3 justify-center bottom-12 left-1/2 -translate-x-1/2 z-10"></div>
+        <div className="custom-pagination absolute flex gap-3 justify-center xl:!bottom-8 xxl:!bottom-10 wide:!bottom-12 left-1/2 -translate-x-1/2 z-10"></div>
       </div>
       {/* Mobile View */}
       <div className="common-container flex-col gap-4 md:!hidden px-6 py-8 !justify-start">

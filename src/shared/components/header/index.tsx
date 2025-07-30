@@ -5,9 +5,7 @@ import { CurveIcon, Logo, StackIllustration } from '@/assets';
 const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeMobileDropdown, setActiveMobileDropdown] = useState<
-    string | null
-  >(null);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -70,7 +68,7 @@ const Header: React.FC = () => {
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current);
     }
-    
+
     setActiveDropdown(item);
     setIsDropdownOpen(true);
   };
@@ -109,7 +107,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div className='relative'>
+    <div className="relative">
       <header ref={headerRef} className="common-component">
         <div
           className={`common-container justify-center transition-colors duration-300 ease-in-out bg-white ${isDropdownOpen ? 'md:bg-white' : 'md:bg-transparent'}`}
@@ -129,7 +127,7 @@ const Header: React.FC = () => {
                   className={`w-[8px] xl:w-[10px] xxl:w-[12px] transition-transform duration-300 ease-in-out ${activeDropdown === item ? 'rotate-180' : ''}`}
                 />
                 <div
-                  className={`absolute -bottom-[12px] xl:-bottom-[16px] xxl:-bottom-[20px] -left-[2px] bg-primary h-[3px] xl:h-[4px] xxl:h-[5px] w-full rounded-t ${activeDropdown === item ? 'block animate-fadeIn' : 'hidden animate-fadeOut'}`}
+                  className={`absolute -bottom-[12px] xl:-bottom-[17px] xxl:-bottom-[20px] -left-[2px] bg-primary h-[3px] xl:h-[4px] xxl:h-[5px] w-full rounded-t ${activeDropdown === item ? 'block animate-fadeIn' : 'hidden animate-fadeOut'}`}
                 ></div>
               </button>
             ))}
@@ -221,7 +219,7 @@ const Header: React.FC = () => {
               </div>
             )}
             <div className="absolute right-0 pr-13">
-            <StackIllustration className='w-21 xl:w-25 xxl:w-32' />
+              <StackIllustration className="w-21 xl:w-25 xxl:w-32" />
             </div>
           </div>
         </div>
