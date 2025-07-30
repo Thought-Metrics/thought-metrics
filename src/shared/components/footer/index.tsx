@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
     <footer className="common-component bg-primary pb-12 xl:pb-16 pt-4 xl:pt-6 xxl:pt-8 wide:pt-10 text-white relative">
       <div className="common-container justify-center px-6 flex-col md:flex-row gap-6 xl:gap-8 xxl:gap-10">
         {/* Brand Section */}
-        <div className="w-42 wide:w-48 gap-1 xxl:gap-2 wide:gap-3 flex flex-col md:pb-auto">
+        <div className="w-45 wide:w-48 gap-1 xxl:gap-2 wide:gap-3 flex flex-col md:pb-auto">
           <LogoWhite className="w-full" />
           <div className="flex justify-between">
             {footerData.socialLinks.map((social) => (
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 key={social.name}
                 src={social.icon}
                 alt={social.name}
-                className="w-9 xxl:w-10 wide:w-12"
+                className="w-10 wide:w-12"
               />
             ))}
           </div>
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
               {footerData.copyright}
             </p>
             <button
-              className="w-12 h-8 xxl:w-14 xxl:h-10 wide:w-15 wide:h-11 bg-white/50 border-none rounded-md flex justify-center cursor-pointer absolute bottom-[-6px] right-8 md:right-21 xxl:right-50 wide:right-92"
+              className="w-14 h-10 wide:w-15 wide:h-11 bg-white/50 border-none rounded-md flex justify-center cursor-pointer absolute bottom-[-6px] right-8 md:right-21 xxl:right-50 wide:right-92"
               onClick={scrollToTop}
               aria-label="Back to top"
             >

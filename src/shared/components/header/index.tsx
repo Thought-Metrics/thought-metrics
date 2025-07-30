@@ -56,16 +56,6 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  const handleNavItemClick = (item: string) => {
-    if (activeDropdown === item) {
-      setIsDropdownOpen(false);
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(item);
-      setIsDropdownOpen(true);
-    }
-  };
-
   const handleMobileNavItemClick = (item: string) => {
     if (activeMobileDropdown === item) {
       setActiveMobileDropdown(null);
