@@ -5,7 +5,7 @@ import { ArrowRight } from '@/assets';
 const B2BServices: React.FC = () => {
   return (
     <section className="common-component bg-neutral">
-      <div className="common-container px-6 py-8 md:px-24 md:py-12 justify-center flex-col !max-w-[1336px]">
+      <div className="common-container px-6 py-8 md:px-24 md:py-12 justify-center flex-col !max-w-[var(--breakpoint-2xl)]">
         <h2 className="text-[1.1rem] md:text-3xl font-semibold leading-[1.25] text-black tracking-normal md:w-[85%]">
           {contentSecondData.mainTitle}
         </h2>

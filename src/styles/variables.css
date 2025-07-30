@@ -20,6 +20,7 @@
   /* Custom colors */
   --custom-grey: #c1c1c1;
   --custom-grey-1: #dddddd;
+  --custom-grey-2: #9E9D9D;
   --custom-blue: #4c4fa9;
   --custom-violet: #f2edff;
   --custom-pink: #ffeaeb;
@@ -35,6 +36,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1336px;
   --breakpoint-xxl: 1536px;
   --breakpoint-wide: 1920px;
 
@@ -63,6 +65,7 @@
   --color-custom-blue: var(--custom-blue);
   --color-custom-grey: var(--custom-grey);
   --color-custom-grey-1: var(--custom-grey-1);
+  --color-custom-grey-2: var(--custom-grey-2);
   --color-custom-violet: var(--custom-violet);
   --color-custom-pink: var(--custom-pink);
 
@@ -72,6 +75,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1336px;
   --breakpoint-xxl: 1536px;
   --breakpoint-wide: 1920px;
 

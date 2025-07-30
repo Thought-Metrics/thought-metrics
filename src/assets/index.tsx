@@ -7,6 +7,7 @@ import ArrowRight from './right-arrow.svg?react';
 import ArrowUp from './up-arrow.svg?react';
 import StackIllustration from './stack_illustration.svg?react';
 import ArrowRightRed from './right-arrow-red.svg?react';
+import HomeIcon from './home.svg?react';
 
 export {
   Logo,
@@ -15,6 +16,7 @@ export {
   ArrowUp,
   StackIllustration,
   ArrowRightRed,
+  HomeIcon,
 };
 
 //Hero Carousel SVGs

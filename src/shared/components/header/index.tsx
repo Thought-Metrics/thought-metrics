@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { headerDropdownData, navigationItems } from './header.constant';
 import { CurveIcon, Logo, StackIllustration } from '@/assets';
 import { Link } from 'react-router-dom';
+import { ROUTES } from '@/routes/routeConfig';
 
 const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -117,7 +118,9 @@ const Header: React.FC = () => {
         >
           {/* Desktop View */}
           <nav className="flex-nowrap gap-3 xl:gap-4 xxl:gap-6 wide:gap-5 py-2 xl:py-3.5 xxl:py-4 hidden md:flex items-center">
-            <Logo className="w-34 xl:w-45 xxl:w-52" />
+            <Link to={ROUTES.HOME}>
+              <Logo className="w-34 xl:w-45 xxl:w-52" />
+            </Link>
             {navigationItems.map((item) => (
               <button
                 key={item}
@@ -144,7 +147,9 @@ const Header: React.FC = () => {
 
           {/* Mobile view */}
           <nav className="w-full py-4 px-5 items-center justify-between flex md:hidden">
-            <Logo className="w-52" />
+            <Link to={ROUTES.HOME}>
+              <Logo className="w-52" />
+            </Link>
             <button
               onClick={toggleMenu}
               className="relative w-8 h-8 flex flex-col justify-center items-center z-[1001]"
@@ -211,6 +216,7 @@ const Header: React.FC = () => {
                     {column.items.length > 0 &&
                       column.items.map((item, itemIndex) => (
                         <Link
+                          onClick={() => handleDropdownLeave()}
                           key={itemIndex + item.label}
                           to={'path' in item ? item.path : '#'}
                           className="text-xxs xl:text-sm xxl:text-lg font-medium hover:underline cursor-pointer tracking-wider"
@@ -287,7 +293,7 @@ const Header: React.FC = () => {
                               <Link
                                 key={subIndex}
                                 to={'path' in subItem ? subItem.path : '#'}
-                                onClick={() => setIsDropdownOpen(false)}
+                                onClick={() => handleDropdownLeave()}
                                 className="block px-4 py-2 text-white/70 hover:text-white text-sm"
                               >
                                 {subItem.label}
