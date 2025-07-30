@@ -11,6 +11,7 @@ const Header: React.FC = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -46,6 +47,15 @@ const Header: React.FC = () => {
     };
   }, [isDropdownOpen]);
 
+  // Clear timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (hoverTimeoutRef.current) {
+        clearTimeout(hoverTimeoutRef.current);
+      }
+    };
+  }, []);
+
   const handleNavItemClick = (item: string) => {
     if (activeDropdown === item) {
       setIsDropdownOpen(false);
@@ -62,6 +72,37 @@ const Header: React.FC = () => {
     } else {
       setActiveMobileDropdown(item);
     }
+  };
+
+  // Desktop hover handlers
+  const handleNavItemHover = (item: string) => {
+    // Clear any existing timeout
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+    
+    setActiveDropdown(item);
+    setIsDropdownOpen(true);
+  };
+
+  const handleNavLeave = () => {
+    // Add a small delay before closing to prevent flickering
+    hoverTimeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+      setActiveDropdown(null);
+    }, 500);
+  };
+
+  const handleDropdownEnter = () => {
+    // Clear timeout if user hovers over dropdown
+    if (hoverTimeoutRef.current) {
+      clearTimeout(hoverTimeoutRef.current);
+    }
+  };
+
+  const handleDropdownLeave = () => {
+    setIsDropdownOpen(false);
+    setActiveDropdown(null);
   };
 
   const getActiveSection = () => {
@@ -90,7 +131,8 @@ const Header: React.FC = () => {
               <button
                 key={item}
                 className={`relative text-[12px] xl:text-md xxl:text-lg text-text-dark font-medium cursor-pointer flex items-center gap-[0.3rem] transition-all duration-300 ease-in-out whitespace-nowrap ${activeDropdown !== item && 'hover:underline hover:underline-offset-2'}`}
-                onClick={() => handleNavItemClick(item)}
+                onMouseEnter={() => handleNavItemHover(item)}
+                onMouseLeave={handleNavLeave}
               >
                 {item}
                 <CurveIcon
@@ -146,6 +188,8 @@ const Header: React.FC = () => {
         <div
           ref={dropdownRef}
           className="absolute left-0 right-0 bg-primary shadow-[0_4px_20px_rgba(0,0,0,0.1)] z-[999] animate-fadeIn hidden md:block text-white"
+          onMouseEnter={handleDropdownEnter}
+          onMouseLeave={handleDropdownLeave}
         >
           <div className="relative flex px-7 py-8 xl:px-9 xxl:px-10 xl:py-10 xxl:py-12 items-center gap-8 xl:gap-11 xxl:gap-13">
             <div className="flex flex-col gap-1 xl:gap-3.5">
