@@ -24,9 +24,9 @@ const HeroCarousel: React.FC = () => {
           }}
           autoplay={{
             delay: 5000,
-            disableOnInteraction: false,
+            disableOnInteraction: true,
           }}
-          className="w-full min-h-[18rem] xl:min-h-[25rem] xxl:min-h-[30rem] wide:min-h-[45rem]"
+          className="w-full min-h-[18rem] xl:min-h-[30rem] xxl:min-h-[38rem] wide:min-h-[45rem]"
         >
           {carouselData.map((item, index) => (
             <SwiperSlide
@@ -35,16 +35,16 @@ const HeroCarousel: React.FC = () => {
             >
               <div className="grid grid-cols-2 w-full h-full">
                 {/* Image Section */}
-                <div className="relative h-full flex items-center">
+                <div className="relative h-full w-full flex items-center justify-end">
                   {(() => {
                     const ImgComponent = item.imgComponent;
                     return ImgComponent ? (
                       <ImgComponent
                         className={cn(
-                          'w-full h-full object-contain scale-100',
-                          index === 0 ? 'p-[4rem] h-[38rem] pr-0' : '',
+                          'xxl:w-[45rem] wide:w-[55rem] h-full object-contain scale-100',
+                          index === 0 ? 'p-[4rem] max-h-[25rem] xxl:max-h-[33rem] wide:max-w-[45rem] wide:max-h-[35rem] pr-0' : '',
                           index === 1
-                            ? 'p-[3rem] max-h-[24rem] xxl:max-h-[38rem] wide:min-h-[46rem] pr-0'
+                            ? 'p-[3rem] max-h-[25rem] xxl:max-h-[36rem] wide:w-[45rem] wide:min-h-[35rem] pr-0'
                             : ''
                         )}
                       />
@@ -54,7 +54,7 @@ const HeroCarousel: React.FC = () => {
 
                 {/* Text Section */}
                 <div className="flex items-center justify-start">
-                  <div className="text-[2.5rem] font-bold text-black">
+                  <div className="text-3xl xxl:text-[3rem] wide:text-5xl font-bold text-black">
                     {item.label.split('\n').map((line, idx) => (
                       <p key={idx + 'label'}>
                         {line.split('.').flatMap((part, i, arr) => [
