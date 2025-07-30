@@ -5,6 +5,7 @@ import { HeroCarousel1 } from '@/assets';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import './hero-carousel.style.css';
+import CustomButtonAtom from '@/shared/ui/atoms/custom-button.atom';
 
 const HeroCarousel: React.FC = () => {
   return (
@@ -42,7 +43,9 @@ const HeroCarousel: React.FC = () => {
                       <ImgComponent
                         className={cn(
                           'w-full xl:w-[38rem] xxl:w-[45rem] wide:w-[55rem] h-full object-contain scale-100',
-                          index === 0 ? 'p-[4rem] max-h-[25rem] xl:max-h-[28rem] xxl:max-h-[33rem] wide:max-w-[45rem] wide:max-h-[35rem] pr-0' : '',
+                          index === 0
+                            ? 'p-[4rem] max-h-[25rem] xl:max-h-[28rem] xxl:max-h-[33rem] wide:max-w-[45rem] wide:max-h-[35rem] pr-0'
+                            : '',
                           index === 1
                             ? 'p-[3rem] max-h-[25rem] xl:max-h-[30rem] xxl:max-h-[37rem] wide:w-[45rem] wide:min-h-[40rem] pr-0'
                             : ''
@@ -93,9 +96,8 @@ const HeroCarousel: React.FC = () => {
             </p>
           ))}
         </div>
-        <button className="bg-primary text-white font-bold rounded text-xl text-nowrap py-1 w-45">
-          <label htmlFor="">{carouselData[0].buttonLabel}</label>
-        </button>
+        <CustomButtonAtom label={carouselData[0].buttonLabel} />
+
         <HeroCarousel1 className="pt-10 w-full h-70 object-contain scale-100 py-0" />
       </div>
     </section>

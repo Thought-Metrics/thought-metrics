@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { headerDropdownData, navigationItems } from './header.constant';
 import { CurveIcon, Logo, StackIllustration } from '@/assets';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
+  const [activeMobileDropdown, setActiveMobileDropdown] = useState<
+    string | null
+  >(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
@@ -207,12 +210,13 @@ const Header: React.FC = () => {
                     )}
                     {column.items.length > 0 &&
                       column.items.map((item, itemIndex) => (
-                        <div
-                          key={itemIndex + item}
+                        <Link
+                          key={itemIndex + item.label}
+                          to={'path' in item ? item.path : '#'}
                           className="text-xxs xl:text-sm xxl:text-lg font-medium hover:underline cursor-pointer tracking-wider"
                         >
-                          {item}
-                        </div>
+                          {item.label}
+                        </Link>
                       ))}
                   </div>
                 ))}
@@ -280,13 +284,14 @@ const Header: React.FC = () => {
                               </h5>
                             )}
                             {column.items.map((subItem, subIndex) => (
-                              <a
+                              <Link
                                 key={subIndex}
-                                href="#"
+                                to={'path' in subItem ? subItem.path : '#'}
+                                onClick={() => setIsDropdownOpen(false)}
                                 className="block px-4 py-2 text-white/70 hover:text-white text-sm"
                               >
-                                {subItem}
-                              </a>
+                                {subItem.label}
+                              </Link>
                             ))}
                           </div>
                         ))}

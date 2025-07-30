@@ -1,10 +1,15 @@
+/* header.constant.ts */
+import { ROUTES } from '@/routes/routeConfig';
+
 export const navigationItems = [
   'Research Methods',
   'Capabilities',
   'Industries',
   'Resources',
 ];
-
+{
+  /* update it with the routeConfig */
+}
 export const headerDropdownData = {
   label: 'OVERVIEW',
   description: 'Understand our approach to B2B\nand B2C research.',
@@ -14,16 +19,16 @@ export const headerDropdownData = {
       columns: [
         {
           items: [
-            'Quantitative Research',
-            'Qualitative Research',
-            'Recruitment and Fieldwork',
+            { label: 'Quantitative Research' },
+            { label: 'Qualitative Research' },
+            { label: 'Recruitment and Fieldwork' },
           ],
         },
         {
           items: [
-            'Surveys',
-            'Focus Group Discussions',
-            'Quality Checks and Data Security',
+            { label: 'Surveys' },
+            { label: 'Focus Group Discussions' },
+            { label: 'Quality Checks and Data Security' },
           ],
         },
       ],
@@ -33,10 +38,10 @@ export const headerDropdownData = {
       columns: [
         {
           items: [
-            'Branding and Advertising Communication',
-            'Market Opportunity Research',
-            'Product Research',
-            'Customer Research and Segmentation',
+            { label: 'Branding and Advertising Communication' },
+            { label: 'Market Opportunity Research' },
+            { label: 'Product Research' },
+            { label: 'Customer Research and Segmentation' },
           ],
         },
       ],
@@ -46,25 +51,37 @@ export const headerDropdownData = {
       columns: [
         {
           items: [
-            'FMCG',
-            'Retail and Merchandising',
-            'Healthcare and Life Sciences',
-            'Advertising and Marketing',
+            { label: 'FMCG', path: ROUTES.INDUSTRY_FMCG },
+            { label: 'Retail and Merchandising', path: ROUTES.INDUSTRY_RETAIL },
+            {
+              label: 'Healthcare and Life Sciences',
+              path: ROUTES.INDUSTRY_HEALTHCARE,
+            },
+            {
+              label: 'Advertising and Marketing',
+              path: ROUTES.INDUSTRY_ADVERTISING,
+            },
           ],
         },
         {
           items: [
-            'Financial Services and Institutions',
-            'Investors',
-            'Automotive',
+            {
+              label: 'Financial Services and Institutions',
+              path: ROUTES.INDUSTRY_FINANCE,
+            },
+            { label: 'Investors', path: ROUTES.INDUSTRY_INVESTOR },
+            { label: 'Automotive', path: ROUTES.INDUSTRY_AUTOMOTIVE },
           ],
         },
         {
           items: [
-            'Education',
-            'Human Resources',
-            'Media and Internet Publishers',
-            'Technology',
+            { label: 'Education', path: ROUTES.INDUSTRY_EDUCATION },
+            { label: 'Human Resources', path: ROUTES.INDUSTRY_HR },
+            {
+              label: 'Media and Internet Publishers',
+              path: ROUTES.INDUSTRY_INTERNET,
+            },
+            { label: 'Technology', path: ROUTES.INDUSTRY_TECHNOLOGY },
           ],
         },
       ],
@@ -73,7 +90,12 @@ export const headerDropdownData = {
       title: 'Resources',
       columns: [
         {
-          items: ['Articles', 'Reports', 'Case Studies', 'Webinars'],
+          items: [
+            { label: 'Articles' },
+            { label: 'Reports' },
+            { label: 'Case Studies' },
+            { label: 'Webinars' },
+          ],
         },
         {
           sub_title: 'Our Panel',
