@@ -1,13 +1,14 @@
 import './svgs.styles.css';
 
 //General and Header SVGs
-import Logo from './logo.svg?react';
-import CurveIcon from './curve-arrow.svg?react';
-import ArrowRight from './right-arrow.svg?react';
-import ArrowUp from './up-arrow.svg?react';
-import StackIllustration from './stack_illustration.svg?react';
-import ArrowRightRed from './right-arrow-red.svg?react';
-import HomeIcon from './home.svg?react';
+import Logo from './svgs/logo.svg?react';
+import CurveIcon from './svgs/curve-arrow.svg?react';
+import ArrowRight from './svgs/right-arrow.svg?react';
+import ArrowUp from './svgs/up-arrow.svg?react';
+import StackIllustration from './svgs/stack_illustration.svg?react';
+import ArrowRed from './svgs/arrow-red.svg?react';
+import HomeIcon from './svgs/home.svg?react';
+import IllustrationSquares from './svgs/illustration-squares.svg?react';
 
 export {
   Logo,
@@ -15,16 +16,18 @@ export {
   ArrowRight,
   ArrowUp,
   StackIllustration,
-  ArrowRightRed,
+  ArrowRed,
   HomeIcon,
+  IllustrationSquares,
 };
 
+/* Home Page */
 //Hero Carousel SVGs
-import HeroCarousel1 from './hero-carousel-1.svg?react';
-import HeroCarousel2 from './hero-carousel-2.svg?react';
+import HeroCarousel1 from './svgs/hero-carousel-1.svg?react';
+import HeroCarousel2 from './svgs/hero-carousel-2.svg?react';
 
-import WingOne from './hero-carousel-3-wing-1.svg?react';
-import WingTwo from './hero-carousel-3-wing-2.svg?react';
+import WingOne from './svgs/hero-carousel-3-wing-1.svg?react';
+import WingTwo from './svgs/hero-carousel-3-wing-2.svg?react';
 
 const HeroCarousel3: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -40,20 +43,29 @@ const HeroCarousel3: React.FC<{ className?: string }> = ({ className }) => {
 export { HeroCarousel1, HeroCarousel2, HeroCarousel3 };
 
 //Solutions Insights SVGs
-import PersonWithPhone from './illustration-model.svg?react';
-import PeopleIcon from './people.svg?react';
-import ResearchIcon from './research.svg?react';
-import StatisticsIcon from './statistics.svg?react';
+import PersonWithPhone from './svgs/illustration-model.svg?react';
+import PeopleIcon from './svgs/people.svg?react';
+import ResearchIcon from './svgs/research.svg?react';
+import StatisticsIcon from './svgs/statistics.svg?react';
 
 export { PersonWithPhone, PeopleIcon, ResearchIcon, StatisticsIcon };
 
 //B2B Services SVGs
-import IllustrationSlope from './illustration-slope.svg?react';
-import DoorPerson from './door-person.svg?react';
-import Spiral from './spiral.svg?react';
-import BoxCluster from './box-cluster.svg?react';
+import IllustrationSlope from './svgs/illustration-slope.svg?react';
+import DoorPerson from './svgs/door-person.svg?react';
+import Spiral from './svgs/spiral.svg?react';
+import BoxCluster from './svgs/box-cluster.svg?react';
 export { IllustrationSlope, DoorPerson, Spiral, BoxCluster };
 
 //Footer
-import LogoWhite from './logo_white.svg?react';
+import LogoWhite from './svgs/logo_white.svg?react';
 export { LogoWhite };
+
+/* Industries Page */
+
+import CheckListIcon from './svgs/check-list.svg?react';
+import FastTimeIcon from './svgs/fast-time.svg?react';
+import SupportHandIcon from './svgs/support-hand.svg?react';
+import SlideBrickIcon from './svgs/slide-brick.svg?react';
+
+export { CheckListIcon, FastTimeIcon, SupportHandIcon, SlideBrickIcon };

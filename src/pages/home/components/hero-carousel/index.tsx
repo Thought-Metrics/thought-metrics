@@ -5,7 +5,7 @@ import { HeroCarousel1 } from '@/assets';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import './hero-carousel.style.css';
-import CustomButtonAtom from '@/shared/ui/atoms/custom-button.atom';
+import CustomButtonAtom from '@/shared/ui/atoms/custom-button';
 
 const HeroCarousel: React.FC = () => {
   return (

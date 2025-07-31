@@ -7,6 +7,7 @@
   /* Semantic colors */
   --primary: #e8505e;
   --primary-dark: #cf464f;
+  --primary-light: #FF969F;
   --secondary: #bbfdf5;
   --accent: #d5fdad;
   --neutral: #ececec;
@@ -51,6 +52,7 @@
   /* Semantic colors */
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-neutral: var(--neutral);

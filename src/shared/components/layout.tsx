@@ -14,8 +14,8 @@ const Layout: React.FC = () => {
 
       <main className="flex-1 relative">
         {showBreadcrumbs && (
-          <div className="absolute w-full flex justify-center">
-            <Breadcrumbs className="w-[var(--breakpoint-2xl)] p-4 md:py-0 md:px-6" />
+          <div className="absolute w-full flex justify-center z-50">
+            <Breadcrumbs className="w-[var(--breakpoint-2xl)] p-4 md:p-10 xxl:py-0 xxl:px-0" />
           </div>
         )}
         <Outlet />

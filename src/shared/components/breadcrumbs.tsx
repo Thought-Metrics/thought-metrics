@@ -1,4 +1,4 @@
-import { ArrowRightRed, HomeIcon } from '@/assets';
+import { ArrowRed, HomeIcon } from '@/assets';
 import type { BreadcrumbItem } from '@/core/interfaces/breadcrumb-item.interface';
 import { generateBreadcrumbsFromPath } from '@/routes/routeConfig';
 import React from 'react';
@@ -23,33 +23,33 @@ export const Breadcrumbs: React.FC<BreadcrumbProps> = ({ className = '' }) => {
 
   return (
     <nav
-      className={`flex gap-2 items-center space-x-1 text-sm font-semibold text-custom-grey-2 ${className}`}
+      className={`flex flex-wrap gap-2 md:gap-3 items-center space-x-1 text-sm md:text-md font-semibold text-custom-grey-2 ${className}`}
       aria-label="Breadcrumb"
     >
-      <ol className="flex gap-2 items-center space-x-1">
+      <ol className="flex flex-wrap gap-2 md:gap-3 items-center space-x-1">
         {breadcrumbs.map((item: BreadcrumbItem, index: number) => (
-          <li key={item.path || item.label} className="flex gap-2 items-center">
-            {index > 0 && <ArrowRightRed />}
+          <li key={item.path || item.label} className="flex flex-wrap gap-2 md:gap-3 items-center">
+            {index > 0 && <ArrowRed />}
 
             {item.isCurrentPage ? (
               <span
-                className="flex items-center"
+                className="flex flex-wrap items-center"
                 aria-current="page"
               >
-                {index === 0 && item.path === '/' && <HomeIcon />}
+                {index === 0 && item.path === '/' && <HomeIcon className='w-5 h-5 pb-0.5'/>}
                 {item.label}
               </span>
             ) : item.path ? (
               <Link
                 to={item.path}
-                className=" transition-colors flex gap-2 items-center"
+                className=" transition-colors flex flex-wrap gap-2 md:gap-3 items-center"
               >
-                {index === 0 && item.path === '/' && <HomeIcon />}
+                {index === 0 && item.path === '/' && <HomeIcon className='w-5 h-5 pb-0.5'/>}
                 {item.label}
               </Link>
             ) : (
-              <span className="flex gap-2 items-center">
-                {index === 0 && item.path === '/' && <HomeIcon />}
+              <span className="flex flex-wrap gap-2 md:gap-3 items-center">
+                {index === 0 && item.path === '/' && <HomeIcon className='w-5 h-5 pb-0.5'/>}
                 {item.label}
               </span>
             )}
