@@ -37,35 +37,44 @@ technology" */
       {
         iconOptions: {
           icon: CheckListIcon,
-          iconIsActive: true,
-          isBorder: true,
+          isActive: true,
+          isBorder: false,
           bgColor: 'primary-light',
         },
         title: 'Unparalleled access to respondents',
         description:
           'Thought Metrics delivers access to divers and varied audiences you need, so you can make the right decisions, even when you need to move quickly',
+        bgColor: 'grey',
+        isBorder: false,
+        isActive: true,
       },
       {
         iconOptions: {
           icon: FastTimeIcon,
-          iconIsActive: true,
-          isBorder: true,
+          isActive: true,
+          isBorder: false,
           bgColor: 'primary-light',
         },
         title: 'Delivery at the speed of market',
         description:
           'Get results at the speed you need with tech-enabled solutions that make it smarter, faster, and easier to achieve meaningful audience engagement in depth and scale',
+        bgColor: 'grey',
+        isBorder: false,
+        isActive: true,
       },
       {
         iconOptions: {
-          icon: SlideBrickIcon,
-          iconIsActive: true,
-          isBorder: true,
+          icon: SupportHandIcon,
+          isActive: true,
+          isBorder: false,
           bgColor: 'primary-light',
         },
         title: 'Choose self-serve to full service research support ',
         description:
           'We are experts in market research, so whether you choose our self serve solutions or a do-it-for-me approach, you are in good hands.',
+        bgColor: 'grey',
+        isBorder: false,
+        isActive: true,
       },
     ],
     questionarySection: {
