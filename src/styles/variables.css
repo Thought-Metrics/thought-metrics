@@ -9,6 +9,7 @@
   --primary-dark: #cf464f;
   --primary-light: #FF969F;
   --secondary: #bbfdf5;
+  --secondary-light: #C0E6F0;
   --accent: #d5fdad;
   --neutral: #ececec;
   --surface: #fbeeee;
@@ -55,6 +56,7 @@
   --color-primary-dark: var(--primary-dark);
   --color-primary-light: var(--primary-light);
   --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
   --color-accent: var(--accent);
   --color-neutral: var(--neutral);
   --color-surface: var(--surface);

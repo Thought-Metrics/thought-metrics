@@ -81,17 +81,14 @@ technology" */
       title: 'Make and impact on your audience',
       description:
         'Crafting impactful brands, campaigns, and advertisements is both an art and a science. An advertising market research company can help you validate your intuitions or illuminate a new path forward. Whether you’re in a creative agency trying to demonstrate your added value to clients or part of an in-house marketing team driving your company’s brand, high quality advertising market research insights can help you answer key strategy-driving questions.',
-      img: '/images/industry_advertising_2.jpg',
+      illustration: {
+        img: '/images/industry_advertising_2.png',
+        size: 'full',
+        aspectRatio: 'landscape',
+        objectFit: 'cover',
+        loading: 'lazy',
+      },
       questionaries: [
-        {
-          title: 'Who to target?',
-          list: [
-            'How should we segment our market?',
-            'Which segments should we target?',
-            'What are the personas of our targeted segments?',
-            'What does the customer journey look like?',
-          ],
-        },
         {
           title: 'Who to target?',
           list: [
@@ -188,10 +185,10 @@ technology" */
         'Heads of HR',
         'Users of particular product or service',
       ],
-      img: '/images/industry_advertising_3.jpg',
+      img: '/images/industry_advertising_3.png',
     },
     actionSection: {
-      img: '/images/industry_girl_1.jpg',
+      img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
       icon: ArrowRed,
       title: 'Know what clicks before you create it!',

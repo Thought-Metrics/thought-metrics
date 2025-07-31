@@ -16,7 +16,7 @@ const CustomBoxIcon: React.FC<any> = ({
   return (
     <div
       className={cn(
-        'w-16 h-16 rounded-lg flex justify-center items-center px-3',
+        'w-16 h-16 rounded-md flex justify-center items-center px-3',
         isBorder ? 'border-black border-2' : '',
         isActive && BG_COLORS[bgColor],
         className
