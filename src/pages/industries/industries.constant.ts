@@ -146,21 +146,25 @@ technology" */
           title: 'Global Sample',
           description:
             'Target the diverse audiences you need to reach. Our varied methods of recruitment ensure a wide respondent pool from which to collect your data.',
+          isBorder: true,
         },
         {
           title: 'Digital Discussions',
           description:
             'Capture dynamic and nuanced insights with our agile approach to data collection and analysis. Stay ahead of the curve and make informed decisions that drive success.',
+          isBorder: true,
         },
         {
           title: 'Automated research',
           description:
             'Automate your research and do more research in less time with quick-turn repeatable solutions. Our AI solutions helps you determine which concepts and ads resonate most with your target audience.',
+          isBorder: true,
         },
         {
           title: 'Rapid Alert Omnibus',
           description:
             'Get quick and reliable insights into your most pressing research questions with Thought Metric’s omnibus solutions. Share your questions with a global audience and get rich in insights in as little as 48 hours.',
+          isBorder: true,
         },
       ],
     },

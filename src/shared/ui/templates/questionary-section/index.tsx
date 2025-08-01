@@ -1,6 +1,5 @@
 import CustomImageAtom from '../../atoms/custom-image';
 import QuestionaryCard from '../../molecules/questionary-card';
-import ServiceCard from '../../molecules/service-card';
 
 const QuestionarySection: React.FC<any> = ({ questionarySection }: any) => {
   return (
