@@ -11,7 +11,7 @@ const FeatureSection: React.FC<any> = ({ featureSection }: any) => {
             <FeatureCard
               feature={feature}
               index={index}
-              className="px-4 py-6 md:px-8 md:py-12"
+              className="px-4 py-4 md:px-8 md:py-8"
             />
           ))}
         </div>

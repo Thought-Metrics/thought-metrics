@@ -69,7 +69,13 @@ import SupportHandIcon from './svgs/support-hand.svg?react';
 import SlideBrickIcon from './svgs/slide-brick.svg?react';
 import IdealCustomerIcon from './svgs/ideal-customer.svg?react';
 import HandSelectionIcon from './svgs/hand-selection.svg?react';
-import CustomerCartIcon from './svgs/customer-cart.svg?react';
+import CustomerBagIcon from './svgs/customer-bag.svg?react';
+import ContainerShelfIcon from './svgs/container-shelf.svg?react';
+import LocatorPinIcon from './svgs/locator-pin.svg?react';
+import PartnerCycleIcon from './svgs/partner-cycle.svg?react';
+import CheckNoteIcon from './svgs/check-note.svg?react';
+import PeopleConnectIcon from './svgs/people-connect.svg?react';
+import PeopleWorldwideIcon from './svgs/people-worldwide.svg?react';
 
 export {
   CheckListIcon,
@@ -78,5 +84,11 @@ export {
   SlideBrickIcon,
   IdealCustomerIcon,
   HandSelectionIcon,
-  CustomerCartIcon,
+  CustomerBagIcon,
+  ContainerShelfIcon,
+  LocatorPinIcon,
+  PartnerCycleIcon,
+  CheckNoteIcon,
+  PeopleConnectIcon,
+  PeopleWorldwideIcon,
 };

@@ -6,7 +6,7 @@ const ActionSection: React.FC<any> = ({ actionSection }: any) => {
       <actionSection.illustration className="absolute -right-26 md:-right-48 -bottom-28 w-[12rem] md:w-[28rem]" />
       <div className="z-1 common-container w-full !max-w-[var(--breakpoint-2xl)] !grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0 px-6 md:px-24 pt-10">
         <div className="flex flex-col items-start justify-center gap-6">
-          <h1 className="w-full xl:w-[70%] xxl:w-[80%] text-black text-2xl xl:text-[2.5rem] wide:text-[3rem] font-semibold">
+          <h1 className="w-full xl:w-[75%] wide:w-[85%] text-black text-2xl xl:text-[2.5rem] wide:text-[3rem] font-semibold">
             {actionSection.title}
           </h1>
           <CustomButtonAtom

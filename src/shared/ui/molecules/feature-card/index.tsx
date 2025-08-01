@@ -16,9 +16,9 @@ const FeatureCard: React.FC<any> = ({ feature, index, className }) => {
         className
       )}
     >
-      <div className="flex flex-col gap-12">
-        <h2 className="text-xl font-medium w-[75%]">{feature.title}</h2>
-        <p className="font-normal leading-5">{feature.description}</p>
+      <div className="flex flex-col gap-4 md:gap-8 xxl:gap-10">
+        <h2 className="text-base xxl:text-xl font-medium">{feature.title}</h2>
+        <p className="text-md xxl:text-base font-normal leading-5">{feature.description}</p>
       </div>
     </div>
   );
