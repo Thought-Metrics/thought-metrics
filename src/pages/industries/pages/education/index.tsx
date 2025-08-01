@@ -1,10 +1,8 @@
-function Education() {
-  return (
-    <div>
-      <h1>Education</h1>
-      <p>Content for the Education industry.</p>
-    </div>
-  );
-}
+import { industries } from '../../industries.constant';
+import IndustryTemplatePage from '../../template';
+
+const Education: React.FC = () => {
+  return <IndustryTemplatePage industry={industries.education} />;
+};
 
 export default Education;

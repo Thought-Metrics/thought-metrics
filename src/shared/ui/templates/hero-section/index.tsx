@@ -24,7 +24,7 @@ const HeroSection: React.FC<any> = ({ heroSection }: any) => {
       <div className="z-1 common-container w-full !max-w-[var(--breakpoint-2xl)] md:min-h-[480px] xl:min-h-[580px] wide:min-h-[780px] items-center p-5 md:p-10 xxl:p-0">
         <div className="md:w-[43%] xxl:w-[37%] wide:w-[50%] h-full flex flex-col gap-3 justify-center">
           <div className="h-[18rem] sm:h-[28rem] md:h-0"></div>
-          <h1 className="w-[70%] text-primary text-2xl xl:text-[2.5rem] wide:text-[3rem] font-semibold">
+          <h1 className="w-[80%] text-primary text-2xl xl:text-[2.5rem] wide:text-[3rem] font-semibold">
             {heroSection.title}
           </h1>
           <p className="w-full text-black text-lg xl:text-[1.3rem] wide:text-[1.7rem] font-semibold">

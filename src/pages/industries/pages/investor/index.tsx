@@ -1,10 +1,8 @@
-function Investor() {
-  return (
-    <div>
-      <h1>Investor Relations</h1>
-      <p>Content for the Investor Relations industry.</p>
-    </div>
-  );
-}
+import { industries } from '../../industries.constant';
+import IndustryTemplatePage from '../../template';
+
+const Investor: React.FC = () => {
+  return <IndustryTemplatePage industry={industries.investor} />;
+};
 
 export default Investor;

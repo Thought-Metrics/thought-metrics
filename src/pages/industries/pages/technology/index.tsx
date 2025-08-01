@@ -1,10 +1,8 @@
-function Technology() {
-  return (
-    <div>
-      <h1>Technology</h1>
-      <p>Content for the Technology industry.</p>
-    </div>
-  );
-}
+import { industries } from '../../industries.constant';
+import IndustryTemplatePage from '../../template';
+
+const Technology: React.FC = () => {
+  return <IndustryTemplatePage industry={industries.technology} />;
+};
 
 export default Technology;

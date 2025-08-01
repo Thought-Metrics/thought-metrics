@@ -1,10 +1,8 @@
-function Retail() {
-  return (
-    <div>
-      <h1>Retail</h1>
-      <p>Content for the Retail industry.</p>
-    </div>
-  );
-}
+import { industries } from '../../industries.constant';
+import IndustryTemplatePage from '../../template';
+
+const Retail: React.FC = () => {
+  return <IndustryTemplatePage industry={industries.retail} />;
+};
 
 export default Retail;

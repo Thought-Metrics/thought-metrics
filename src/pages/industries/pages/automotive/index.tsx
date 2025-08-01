@@ -1,10 +1,8 @@
-function Automotive() {
-  return (
-    <div>
-      <h1>Automotive</h1>
-      <p>Content for the Automotive industry.</p>
-    </div>
-  );
-}
+import { industries } from '../../industries.constant';
+import IndustryTemplatePage from '../../template';
+
+const Automotive: React.FC = () => {
+  return <IndustryTemplatePage industry={industries.automotive} />;
+};
 
 export default Automotive;

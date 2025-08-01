@@ -1,10 +1,8 @@
-function Internet() {
-  return (
-    <div>
-      <h1>Internet Services</h1>
-      <p>Content for the Internet Services industry.</p>
-    </div>
-  );
-}
+import { industries } from '../../industries.constant';
+import IndustryTemplatePage from '../../template';
+
+const Internet: React.FC = () => {
+  return <IndustryTemplatePage industry={industries.internet} />;
+};
 
 export default Internet;

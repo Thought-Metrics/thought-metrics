@@ -1,10 +1,8 @@
-function Healthcare() {
-  return (
-    <div>
-      <h1>Healthcare</h1>
-      <p>Content for the Healthcare industry.</p>
-    </div>
-  );
-}
+import { industries } from '../../industries.constant';
+import IndustryTemplatePage from '../../template';
+
+const Healthcare: React.FC = () => {
+  return <IndustryTemplatePage industry={industries.healthcare} />;
+};
 
 export default Healthcare;
