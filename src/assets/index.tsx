@@ -69,5 +69,14 @@ import SupportHandIcon from './svgs/support-hand.svg?react';
 import SlideBrickIcon from './svgs/slide-brick.svg?react';
 import IdealCustomerIcon from './svgs/ideal-customer.svg?react';
 import HandSelectionIcon from './svgs/hand-selection.svg?react';
+import CustomerCartIcon from './svgs/customer-cart.svg?react';
 
-export { CheckListIcon, FastTimeIcon, SupportHandIcon, SlideBrickIcon, IdealCustomerIcon, HandSelectionIcon };
+export {
+  CheckListIcon,
+  FastTimeIcon,
+  SupportHandIcon,
+  SlideBrickIcon,
+  IdealCustomerIcon,
+  HandSelectionIcon,
+  CustomerCartIcon,
+};
