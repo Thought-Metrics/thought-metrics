@@ -76,6 +76,21 @@ import PartnerCycleIcon from './svgs/partner-cycle.svg?react';
 import CheckNoteIcon from './svgs/check-note.svg?react';
 import PeopleConnectIcon from './svgs/people-connect.svg?react';
 import PeopleWorldwideIcon from './svgs/people-worldwide.svg?react';
+import AnalystIcon from './svgs/analyst.svg?react';
+import CarIcon from './svgs/car.svg?react';
+import ClipboardIcon from './svgs/clipboard.svg?react';
+import CoderIcon from './svgs/coder.svg?react';
+import CustomerCartIcon from './svgs/customer-cart.svg?react';
+import FirstLawIcon from './svgs/first-law.svg?react';
+import KeyIcon from './svgs/key.svg?react';
+import MechanicIcon from './svgs/mechanic.svg?react';
+import NavigateChangeIcon from './svgs/navigate-change.svg?react';
+import PersonReadIcon from './svgs/person-read.svg?react';
+import PersonStaringIcon from './svgs/person-staring.svg?react';
+import SheetBagIcon from './svgs/sheet-bag.svg?react';
+import ShieldIcon from './svgs/shield.svg?react';
+import UIPanelIcon from './svgs/ui-panel.svg?react';
+import WorkerIcon from './svgs/worker.svg?react';
 
 export {
   CheckListIcon,
@@ -91,4 +106,19 @@ export {
   CheckNoteIcon,
   PeopleConnectIcon,
   PeopleWorldwideIcon,
+  PersonReadIcon,
+  PersonStaringIcon,
+  SheetBagIcon,
+  ShieldIcon,
+  UIPanelIcon,
+  WorkerIcon,
+  AnalystIcon,
+  CarIcon,
+  ClipboardIcon,
+  CoderIcon,
+  CustomerCartIcon,
+  FirstLawIcon,
+  KeyIcon,
+  MechanicIcon,
+  NavigateChangeIcon,
 };
