@@ -25,9 +25,9 @@ const ServiceCard: React.FC<any> = ({ service, index, className }) => {
         isBorder={service.iconOptions.isBorder}
         bgColor={service.iconOptions.bgColor}
       />
-      <div className="flex flex-col gap-1">
-        <h2 className="font-semibold">{service.title}</h2>
-        <p className="">{service.description}</p>
+      <div className="flex flex-col gap-1 w-full">
+        <h2 className="font-semibold wide:text-lg">{service.title}</h2>
+        <p className="wide:text-lg leading-5">{service.description}</p>
       </div>
     </div>
   );
