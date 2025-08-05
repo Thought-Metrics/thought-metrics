@@ -28,8 +28,8 @@ const NotFound: React.FC = () => {
           <div className="text-sm text-gray-500">
             <p>Or try one of these links:</p>
             <div className="mt-2 space-x-4">
-              <Link to="/industries" className="text-primary hover:underline">
-                Industries
+              <Link to="/industries/fmcg" className="text-primary hover:underline">
+                FMCG
               </Link>
               <Link
                 to="/industries/advertising"

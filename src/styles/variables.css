@@ -7,9 +7,9 @@
   /* Semantic colors */
   --primary: #e8505e;
   --primary-dark: #cf464f;
-  --primary-light: #FF969F;
+  --primary-light: #ff969f;
   --secondary: #bbfdf5;
-  --secondary-light: #C0E6F0;
+  --secondary-light: #c0e6f0;
   --accent: #d5fdad;
   --neutral: #ececec;
   --surface: #fbeeee;
@@ -22,11 +22,11 @@
   /* Custom colors */
   --custom-grey: #c1c1c1;
   --custom-grey-1: #dddddd;
-  --custom-grey-2: #9E9D9D;
-  --custom-grey-3: #E8E2E2;
-  --custom-grey-4: #E5E6EA;
+  --custom-grey-2: #9e9d9d;
+  --custom-grey-3: #e8e2e2;
+  --custom-grey-4: #e5e6ea;
   --custom-blue: #4c4fa9;
-  --custom-blue-light: #F0F0FA;
+  --custom-blue-light: #f0f0fa;
   --custom-violet: #f2edff;
   --custom-pink: #ffeaeb;
 
@@ -113,6 +113,22 @@
   /* Font Size values */
   --text-xxs: 0.7rem;
   --text-md: 15px;
+
+  /* Shadows */
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @supports (padding: max(0px)) {

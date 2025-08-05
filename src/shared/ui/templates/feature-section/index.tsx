@@ -1,4 +1,4 @@
-import FeatureCard from '../../molecules/feature-card';
+import {FeatureCard} from '../../molecules/feature-card';
 const FeatureSection: React.FC<any> = ({ featureSection }: any) => {
   return (
     <section className="common-component w-full h-full relative bg-primary">

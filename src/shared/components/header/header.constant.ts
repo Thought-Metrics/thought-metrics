@@ -38,10 +38,22 @@ export const headerDropdownData = {
       columns: [
         {
           items: [
-            { label: 'Branding and Advertising Communication' },
-            { label: 'Market Opportunity Research' },
-            { label: 'Product Research' },
-            { label: 'Customer Research and Segmentation' },
+            {
+              label: 'Branding and Advertising Communication',
+              path: ROUTES.CAPABILITY_BRANDING_ADVERTISING,
+            },
+            {
+              label: 'Market Opportunity Research',
+              path: ROUTES.CAPABILITY_MARKET_OPPORTUNITY,
+            },
+            {
+              label: 'Product Research',
+              path: ROUTES.CAPABILITY_PRODUCT_RESEARCH,
+            },
+            {
+              label: 'Customer Research and Segmentation',
+              path: ROUTES.CAPABILITY_CUSTOMER_RESEARCH,
+            },
           ],
         },
       ],

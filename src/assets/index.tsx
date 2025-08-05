@@ -61,7 +61,7 @@ export { IllustrationSlope, DoorPerson, Spiral, BoxCluster };
 import LogoWhite from './svgs/logo_white.svg?react';
 export { LogoWhite };
 
-/* Industries Page */
+/* Industries Page Icons*/
 
 import CheckListIcon from './svgs/check-list.svg?react';
 import FastTimeIcon from './svgs/fast-time.svg?react';
@@ -121,4 +121,84 @@ export {
   KeyIcon,
   MechanicIcon,
   NavigateChangeIcon,
+};
+
+/* Capabilities Page ICONS & Illustrations */
+
+import BrandAwarnessIllustration from './svgs/brand-awarness.svg?react';
+import CompetitiveAnalysisIllustration from './svgs/competitive-analysis.svg?react';
+import ConjointAnalysisIllustration from './svgs/conjoint-analysis.svg?react';
+import CustomerLoyaltyIllustration from './svgs/customer-loyalty.svg?react';
+import MarketEntryIllustration from './svgs/market-entry.svg?react';
+import MountainIllustration from './svgs/mountain-illustration.svg?react';
+import ProductValidationIllustration from './svgs/product-validation.svg?react';
+import UXResearchIllustration from './svgs/ux-research.svg?react';
+import GotoIllustration from './svgs/goto-illustration.svg?react';
+import FeasibilityIllustration from './svgs/feasibility-illustration.svg?react';
+import CubicCaptureIllustration from './svgs/cubic-capture-illustration.svg?react';
+import IllustrationSquares1 from './svgs/illustration-squares-1.svg?react';
+import EyeTrackingIllustration from './svgs/eye-tracking.svg?react';
+import BrandLoyaltyIcon from './svgs/brand-loyalty.svg?react';
+import ChangeAdaptabilityIcon from './svgs/change-adaptability.svg?react';
+import CompetitiveEdgeIcon from './svgs/competitive-edge.svg?react';
+import ConceptTestingIcon from './svgs/concept-testing.svg?react';
+import CostReductionIcon from './svgs/cost-reduction.svg?react';
+import CustomerInsightsIcon from './svgs/customer-insights.svg?react';
+import CustomerSatisfactionIcon from './svgs/customer-satisfaction.svg?react';
+import CustomerStarIcon from './svgs/customer-star.svg?react';
+import EnhancedRoiIcon from './svgs/enhanced-roi.svg?react';
+import HolisticCampaignIcon from './svgs/holistic-campaign.svg?react';
+import IdeaGenerationIcon from './svgs/idea-generation.svg?react';
+import InnovationEncouragementIcon from './svgs/innovation-encouragement.svg?react';
+import LoveCycleIcon from './svgs/love-cycle.svg?react';
+import MarketSimulationIcon from './svgs/market-simulation.svg?react';
+import MessageKiteIllustration from './svgs/message-kite.svg?react';
+import OptMarketingIcon from './svgs/opt-marketing.svg?react';
+import PackingBrandingIcon from './svgs/packing-branding.svg?react';
+import PrelaunchFeedbackIcon from './svgs/prelaunch-feedback.svg?react';
+import PricingPositioningIcon from './svgs/pricing-positioning.svg?react';
+import ProductMarketFitIcon from './svgs/product-market-fit.svg?react';
+import PrototypeEvaluationIcon from './svgs/prototype-evaluation.svg?react';
+import RiskMitigationIcon from './svgs/risk-mitigation.svg?react';
+import PostLaunchInsightIcon from './svgs/post-launch-insights.svg?react';
+import DataDrivenIcon from './svgs/data-driven.svg?react';
+
+export {
+  BrandAwarnessIllustration,
+  CompetitiveAnalysisIllustration,
+  ConjointAnalysisIllustration,
+  CustomerLoyaltyIllustration,
+  MarketEntryIllustration,
+  MountainIllustration,
+  ProductValidationIllustration,
+  UXResearchIllustration,
+  GotoIllustration,
+  FeasibilityIllustration,
+  CubicCaptureIllustration,
+  IllustrationSquares1,
+  EyeTrackingIllustration,
+  BrandLoyaltyIcon,
+  ChangeAdaptabilityIcon,
+  CompetitiveEdgeIcon,
+  ConceptTestingIcon,
+  CostReductionIcon,
+  CustomerInsightsIcon,
+  CustomerSatisfactionIcon,
+  CustomerStarIcon,
+  EnhancedRoiIcon,
+  HolisticCampaignIcon,
+  IdeaGenerationIcon,
+  InnovationEncouragementIcon,
+  LoveCycleIcon,
+  MarketSimulationIcon,
+  MessageKiteIllustration,
+  OptMarketingIcon,
+  PackingBrandingIcon,
+  PrelaunchFeedbackIcon,
+  PricingPositioningIcon,
+  ProductMarketFitIcon,
+  PrototypeEvaluationIcon,
+  RiskMitigationIcon,
+  PostLaunchInsightIcon,
+  DataDrivenIcon
 };

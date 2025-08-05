@@ -24,6 +24,11 @@ import Investor from '@/pages/industries/pages/investor';
 import Technology from '@/pages/industries/pages/technology';
 import Layout from '@/shared/components/layout';
 import NotFound from '@/pages/not-found';
+import CapabilitiesBrandingAdvertisingPage from '@/pages/capabilities/pages/branding-advertising';
+import CapabilitiesCustomerResearchPage from '@/pages/capabilities/pages/customer-research';
+import CapabilitiesMarketOpportunityPage from '@/pages/capabilities/pages/market-opportunity';
+import CapabilitiesProductResearchPage from '@/pages/capabilities/pages/product-research';
+import CapabilitiesPage from '@/pages/capabilities';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,7 +39,7 @@ export const router = createBrowserRouter(
       {/* Industries Routes with Nested Structure */}
       <Route path="industries" element={<IndustriesPage />}>
         <Route index element={<Navigate to="/industries" replace />} />
-        <Route path="advertising" element={<Advertising />} />
+        <Route path="advertising_marketing" element={<Advertising />} />
         <Route path="internet" element={<Internet />} />
         <Route path="retail" element={<Retail />} />
         <Route path="healthcare" element={<Healthcare />} />
@@ -45,6 +50,15 @@ export const router = createBrowserRouter(
         <Route path="fmcg" element={<FMCG />} />
         <Route path="investor" element={<Investor />} />
         <Route path="technology" element={<Technology />} />
+      </Route>
+
+      {/* Capabilities Routes with Nested Structure */}
+      <Route path="capabilities" element={<CapabilitiesPage />}>
+        <Route index element={<Navigate to="/capabilities" replace />} />
+        <Route path="branding_advertising" element={<CapabilitiesBrandingAdvertisingPage />} />
+        <Route path="market_opportunity" element={<CapabilitiesMarketOpportunityPage />} />
+        <Route path="product_research" element={<CapabilitiesProductResearchPage />} />
+        <Route path="customer_research" element={<CapabilitiesCustomerResearchPage />} />
       </Route>
 
       {/* 404 Route */}

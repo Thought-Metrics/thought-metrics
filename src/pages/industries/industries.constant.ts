@@ -101,8 +101,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'Who to target?',
           list: [
@@ -208,7 +209,6 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
       title: 'Know what clicks before you create it!',
       actionLabel: "Let's Connect",
     },
@@ -284,8 +284,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'What our target audience thinks and does?',
           list: [
@@ -380,7 +381,6 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
       title: 'Stay in sync with what your audience actually wants.',
       actionLabel: "Let's Connect",
     },
@@ -455,8 +455,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'Who to target?',
           list: [
@@ -556,7 +557,7 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
+
       title: 'See what drives shoppers—before they reach the shelf.',
       actionLabel: "Let's Connect",
     },
@@ -631,8 +632,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'What care providers and patients want',
           list: [
@@ -736,7 +738,7 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
+
       title:
         'Hear what patients and providers really think—when it matters most.',
       actionLabel: "Let's Connect",
@@ -812,8 +814,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'Who should we hire—and how?',
           list: [
@@ -906,7 +909,7 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
+
       title: 'Build better workplaces with insights that matter.',
       actionLabel: "Let's Connect",
     },
@@ -981,8 +984,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'Who to target?',
           list: [
@@ -1085,7 +1089,7 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
+
       title: 'Make smarter decisions with the people who trust you most.',
       actionLabel: "Let's Connect",
     },
@@ -1160,8 +1164,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: "Who's your real customer?",
           list: [
@@ -1257,7 +1262,7 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
+
       title: 'Drive decisions with insights from the people behind the wheel.',
       actionLabel: "Let's Connect",
     },
@@ -1332,8 +1337,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'Who are we designing for?',
           list: [
@@ -1430,7 +1436,7 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
+
       title:
         'Shape learning experiences with insights from students, parents, and educators.',
       actionLabel: "Let's Connect",
@@ -1506,8 +1512,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'What do consumers actually want now?',
           list: [
@@ -1605,7 +1612,6 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
       title:
         'Ready to fuel your next big decision with clarity and confidence?',
       actionLabel: "Let's Connect",
@@ -1682,8 +1688,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'Is the market opportunity real—or hyped?',
           list: [
@@ -1780,7 +1787,7 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
+
       title: 'Move from instinct to insight—and from insight to impact.',
       actionLabel: "Let's Connect",
     },
@@ -1855,8 +1862,9 @@ export const industries = {
         aspectRatio: 'landscape',
         objectFit: 'cover',
         loading: 'lazy',
+        rounded: 'none',
       },
-      questionaries: [
+      questionnaires: [
         {
           title: 'Who are your end users and buyers',
           list: [
@@ -1957,7 +1965,7 @@ export const industries = {
     actionSection: {
       img: '/images/industry_girl_1.png',
       illustration: SlideBrickIcon,
-      icon: ArrowRed,
+
       title: 'Move from instinct to insight—and from insight to impact.',
       actionLabel: "Let's Connect",
     },

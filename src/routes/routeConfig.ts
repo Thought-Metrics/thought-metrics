@@ -5,7 +5,7 @@ export const ROUTES = {
   HOME: '/',
   /* Industry Routes */
   INDUSTRY: '/industries',
-  INDUSTRY_ADVERTISING: '/industries/advertising',
+  INDUSTRY_ADVERTISING: '/industries/advertising_marketing',
   INDUSTRY_INTERNET: '/industries/internet',
   INDUSTRY_RETAIL: '/industries/retail',
   INDUSTRY_HEALTHCARE: '/industries/healthcare',
@@ -16,6 +16,12 @@ export const ROUTES = {
   INDUSTRY_FMCG: '/industries/fmcg',
   INDUSTRY_INVESTOR: '/industries/investor',
   INDUSTRY_TECHNOLOGY: '/industries/technology',
+  /* Capabilities Routes */
+  CAPABILITY: '/capabilities',
+  CAPABILITY_BRANDING_ADVERTISING: '/capabilities/branding_advertising',
+  CAPABILITY_MARKET_OPPORTUNITY: '/capabilities/market_opportunity',
+  CAPABILITY_PRODUCT_RESEARCH: '/capabilities/product_research',
+  CAPABILITY_CUSTOMER_RESEARCH: '/capabilities/customer_research',
   /* Other Routes */
   NOT_FOUND: '*',
 } as const;
@@ -41,7 +47,7 @@ export const generateBreadcrumbsFromPath = (
     // Custom labels for known segments
     const segmentLabels: Record<string, string> = {
       industries: 'Industries',
-      advertising: 'Advertising and Media',
+      advertising_marketing: 'Advertising and Marketing',
       internet: 'Internet and Media',
       retail: 'Retail and Merchandising',
       healthcare: 'Healthcare and Life Sciences',
@@ -52,6 +58,10 @@ export const generateBreadcrumbsFromPath = (
       fmcg: 'FMCG',
       investor: 'Investor',
       technology: 'Technology',
+      branding_advertising: 'Branding and Advertising Communication',
+      market_opportunity: 'Market Opportunity Research',
+      product_research: 'Product Research',
+      customer_research: 'Customer Research and Segmentation',
     };
 
     if (segmentLabels[segment]) {

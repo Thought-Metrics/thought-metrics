@@ -1,3 +1,4 @@
+import { cn } from '@/core/utils/cn';
 import React from 'react';
 // Define the image data structure
 export interface ImageData {
@@ -24,6 +25,7 @@ export interface ImageAtomProps {
 
 // Size configurations
 const SIZE_CLASSES = {
+  default:'',
   sm: 'w-16 h-16',
   md: 'w-24 h-24',
   lg: 'w-32 h-32',
@@ -89,26 +91,25 @@ const CustomImageAtom: React.FC<ImageAtomProps> = ({
   loading = 'lazy',
 }) => {
   // Combine all classes
-  const imageClasses = [
-    SIZE_CLASSES[size],
-    ROUNDED_CLASSES[rounded],
-    ASPECT_RATIO_CLASSES[aspectRatio],
-    OBJECT_FIT_CLASSES[objectFit],
-    'transition-all duration-300 ease-in-out',
-    onClick ? 'cursor-pointer hover:scale-105' : '',
-    className,
-  ]
-    .filter(Boolean)
-    .join(' ');
 
   return (
     <div className="relative inline-block z-1">
-      <div
-        className={`w-[95%] h-full z-[-1] bg-primary absolute ${ROUNDED_CLASSES[rounded]} ${SHADOW_POSITION_CLASSES[shadowPosition]} ${SHADOW_OPACITY_CLASSES[shadowOpacity]}`}
-      ></div>
+      {shadowOpacity !== 'default' && (
+        <div
+          className={`w-[95%] h-full z-[-1] bg-primary absolute ${ROUNDED_CLASSES[rounded]} ${SHADOW_POSITION_CLASSES[shadowPosition]} ${SHADOW_OPACITY_CLASSES[shadowOpacity]}`}
+        ></div>
+      )}
       <img
         src={src}
-        className={imageClasses}
+        className={cn(
+          SIZE_CLASSES[size],
+          ROUNDED_CLASSES[rounded],
+          ASPECT_RATIO_CLASSES[aspectRatio],
+          OBJECT_FIT_CLASSES[objectFit],
+          'transition-all duration-300 ease-in-out',
+          onClick ? 'cursor-pointer hover:scale-105' : '',
+          className
+        )}
         onClick={onClick}
         loading={loading}
       />

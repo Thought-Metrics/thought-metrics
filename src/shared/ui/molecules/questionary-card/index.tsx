@@ -1,9 +1,33 @@
 import { ArrowRed } from '@/assets';
+import { cn } from '@/core/utils/cn';
 import React, { useState } from 'react';
 
-const QuestionaryCard: React.FC<any> = ({ questionaries }) => {
+const QuestionaryCardValue: React.FC<any> = ({
+  questionary,
+  className = '',
+}) => {
+  if (questionary.list) {
+    return (
+      <ul className="mt-4 text-base md:text-xl">
+        {questionary.list.map((question: string, index: number) => {
+          return (
+            <li key={index + question} className="flex items-start">
+              <span className="mr-3">•</span>
+              <span>{question}</span>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  }
+  if (questionary.description) {
+    return <p className='mt-4 md:text-xl'>{questionary.description}</p>;
+  }
+};
+
+const QuestionaryCard: React.FC<any> = ({ questionnaires, className = '' }) => {
   const [activeQuestionary, setActiveQuestionary] = useState<string | null>(
-    questionaries[0].title
+    questionnaires[0].title
   );
 
   const toggleSection = (section: string) => {
@@ -15,9 +39,9 @@ const QuestionaryCard: React.FC<any> = ({ questionaries }) => {
   };
 
   return (
-    <div className="w-full p-6 flex flex-col gap-3">
+    <div className={cn('w-full p-6 flex flex-col gap-3', className)}>
       {/* Who to target Section */}
-      {questionaries.map((questionary: any, index: number) => {
+      {questionnaires.map((questionary: any, index: number) => {
         return (
           <div key={index + questionary.title} className="">
             <button
@@ -33,16 +57,7 @@ const QuestionaryCard: React.FC<any> = ({ questionaries }) => {
             </button>
 
             {questionary.title === activeQuestionary && (
-              <ul className="mt-4 text-base md:text-xl">
-                {questionary.list.map((question: string, index: number) => {
-                  return (
-                    <li key={index + question} className="flex items-start">
-                      <span className="mr-3">•</span>
-                      <span>{question}</span>
-                    </li>
-                  );
-                })}
-              </ul>
+              <QuestionaryCardValue questionary={questionary} />
             )}
           </div>
         );
