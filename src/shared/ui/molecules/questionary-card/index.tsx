@@ -8,7 +8,7 @@ const QuestionaryCardValue: React.FC<any> = ({
 }) => {
   if (questionary.list) {
     return (
-      <ul className="mt-4 text-base md:text-xl">
+      <ul className={cn('mt-4 text-base md:text-xl', className)}>
         {questionary.list.map((question: string, index: number) => {
           return (
             <li key={index + question} className="flex items-start">
@@ -21,7 +21,7 @@ const QuestionaryCardValue: React.FC<any> = ({
     );
   }
   if (questionary.description) {
-    return <p className='mt-4 md:text-xl'>{questionary.description}</p>;
+    return <p className="mt-4 md:text-xl">{questionary.description}</p>;
   }
 };
 

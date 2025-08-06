@@ -1,6 +1,5 @@
 import {
   AnalystIcon,
-  ArrowRed,
   CarIcon,
   CheckListIcon,
   CheckNoteIcon,
