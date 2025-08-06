@@ -363,43 +363,51 @@ export const capabilities = {
           description:
             'With a clearer understanding of the competitive landscape, businesses can allocate resources more efficiently to areas that offer the greatest potential for growth and profitability',
           bgColor: 'grey',
-          isBorder: true,
+          isBorder: false,
           isActive: false,
+          line3: true,
+          line4: true,
+          point: true,
         },
         {
           title: 'Informed decision making',
           description:
             'Competitive intelligence equips businesses with the knowledge needed to make well-informed decisions. By understanding their competitor’s strengths, weakness, and strategies, organizations can develop effective plans that capitalize on opportunities and mitigate risks',
           bgColor: 'grey',
-          isBorder: true,
+          isBorder: false,
           isActive: false,
+          line3: true,
+          line4: true,
+          point: true,
         },
         {
           title: 'Customer insights',
           description:
             'Understanding how competitors interact with customers provide valuable insights into consumer behavior and preferences. This knowledge helps companies refine their marketing and customer engagement strategies.',
           bgColor: 'grey',
-          isBorder: true,
+          isBorder: false,
           isActive: false,
+          line4: true,
         },
         {
           title: 'Long-term strategy',
           description:
             'Competitive intelligence research contributes to the development of robust, forward-looking strategies that consider market dynamics and potential challenges.',
           bgColor: 'grey',
-          isBorder: true,
+          isBorder: false,
           isActive: false,
+          line3: true,
         },
         {
           title: 'Innovation',
           description:
             'By identifying gaps or areas where competitors are lacking, businesses can innovate and create new products or services that meet customer needs in unique ways.',
           bgColor: 'grey',
-          isBorder: true,
-          isActive: false,
+          line3: true,
         },
         {
           title: 'The Competitive Edge.',
+          bgColor: 'primary',
           isActive: true,
         },
       ],
@@ -479,61 +487,81 @@ export const capabilities = {
       ],
     },
     featureSection: {
+      title: 'The Competitive Analysis Process',
       items: [
-        {
-          title: 'Define Your Industry and Market',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
-        {
-          title: 'Identify key competitors',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
-        {
-          title: 'Gather data',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
-        {
-          title: 'Analyze competitor’s strategies',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
-        {
-          title: 'Framework Analysis',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
-        {
-          title: 'Benchmarking',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
-        {
-          title: 'Identify opportunities and threats',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
-        {
-          title: 'Develop actionable insights',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
-        {
-          title: 'Continuously monitor',
-          isBorder: true,
-          bgColor: 'white',
-          bgOpacity: '20',
-        },
+        [
+          {
+            title: 'Define Your Industry and Market',
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '10',
+            isArrow: false,
+          },
+          {
+            title: 'Identify key competitors',
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '10',
+            isArrow: true,
+          },
+          {
+            title: 'Gather data',
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '10',
+            isArrow: true,
+            isLowerCurve: true,
+          },
+        ],
+        [
+          {
+            title: "Analyze competitor's strategies",
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '10',
+            isArrow: true,
+            isUpperCurve: true,
+          },
+          {
+            title: 'Framework Analysis',
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '10',
+            isArrow: true,
+          },
+          {
+            title: 'Benchmarking',
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '10',
+            isArrow: true,
+            isLowerCurve: true,
+          },
+        ],
+        [
+          {
+            title: 'Identify opportunities and threats',
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '20',
+            isArrow: true,
+            isUpperCurve: true,
+          },
+          {
+            title: 'Develop actionable insights',
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '20',
+            isArrow: true,
+          },
+          {
+            title: 'Continuously monitor',
+            isBorder: true,
+            bgColor: 'white',
+            bgOpacity: '20',
+            isArrow: true,
+          },
+        ],
       ],
     },
     b2bServiceSection: {
@@ -547,7 +575,7 @@ export const capabilities = {
           illustration: CompetitiveAnalysisIllustration,
         },
         {
-          className: 'absolute -bottom-5 right-20 w-[20rem] h-full',
+          className: 'absolute right-20 w-[18rem] h-[20rem] top-1/2 transform -translate-y-1/2',
           title: 'Go-to-market Research',
           description:
             'New product launch, market expansion, business changes, rebranding or repositioning, competitive analysis, customer feedback, sales performance concerns, product or service enhancements, marketing strategy review, continuous improvement.',
@@ -555,7 +583,7 @@ export const capabilities = {
           illustration: GotoIllustration,
         },
         {
-          className: 'absolute top-8 right-0 h-[70%]',
+          className: 'absolute right-1/6 h-[70%] top-1/2 transform -translate-y-1/2',
           title: 'Market Entry Research',
           description:
             'Cultural and language barriers, regulatory complexity, competitive dynamics, dynamic market conditions, resource constraints, time sensitivity, consumer behavior, distribution channels, risk assessment, customer feedback and market perception, partnership and alliances, entry strategy.',
@@ -563,8 +591,8 @@ export const capabilities = {
           illustration: MarketEntryIllustration,
         },
         {
-          className: 'absolute right-26 bottom-14 w-[12%] h-[12%]',
-          className1: 'absolute left-20 bottom-5 w-[18%] h-[18%]',
+          className: 'absolute right-12 top-12 w-[12%] h-[12%]',
+          className1: 'absolute left-0 ml-12 bottom-10 w-[21%] h-[21%]',
           title: 'Market Feasibility study',
           description:
             'Market analysis, target audience, technical feasibility, operational feasibility, financial analysis, risk assessment, economic factors.',

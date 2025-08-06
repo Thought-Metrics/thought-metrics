@@ -1,5 +1,5 @@
 import React from 'react';
-const BrandAdB2BServices: React.FC<any> = ({ b2bServiceSection }) => {
+const MarketOptB2BServices: React.FC<any> = ({ b2bServiceSection }) => {
   return (
     <section className="common-component bg-white">
       <div className="common-container px-6 py-8 md:px-24 md:py-12 justify-center flex-col !max-w-[var(--breakpoint-2xl)]">
@@ -194,4 +194,4 @@ const BrandAdB2BServices: React.FC<any> = ({ b2bServiceSection }) => {
   );
 };
 
-export default BrandAdB2BServices;
+export default MarketOptB2BServices;

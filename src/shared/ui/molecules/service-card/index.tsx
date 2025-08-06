@@ -13,7 +13,9 @@ const ServiceCard: React.FC<any> = ({
   index,
   className,
   iconClassName = '',
+  contentClassName = '',
 }) => {
+  console.log(contentClassName);
   return (
     <div
       key={index + service.title}
@@ -24,16 +26,20 @@ const ServiceCard: React.FC<any> = ({
         className
       )}
     >
-      <CustomBoxIcon
-        icon={service.iconOptions.icon}
-        isActive={service.iconOptions.isActive}
-        isBorder={service.iconOptions.isBorder}
-        bgColor={service.iconOptions.bgColor}
-        className={iconClassName}
-      />
-      <div className="flex flex-col gap-1 w-full">
-        <h2 className="font-semibold wide:text-lg">{service.title}</h2>
-        <p className="wide:text-lg leading-5">{service.description}</p>
+      {service.iconOptions && (
+        <CustomBoxIcon
+          icon={service.iconOptions.icon}
+          isActive={service.iconOptions.isActive}
+          isBorder={service.iconOptions.isBorder}
+          bgColor={service.iconOptions.bgColor}
+          className={iconClassName}
+        />
+      )}
+      <div className={cn('flex flex-col gap-1 w-full', contentClassName)}>
+        <span className="font-semibold wide:text-lg w-fit">{service.title}</span>
+        {service.description && (
+          <p className="wide:text-lg leading-5">{service.description}</p>
+        )}
       </div>
     </div>
   );

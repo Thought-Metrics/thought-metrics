@@ -27,13 +27,15 @@ const FeatureCard: React.FC<any> = ({ feature, index, className }) => {
 };
 
 const BrandAdFeatureCard: React.FC<any> = ({ feature, index, className }) => {
+  const bgColor =
+    feature.bgColor && `${BG_COLORS[feature.bgColor]}/${feature.bgOpacity}`;
   return (
     <div
       key={index + feature.title}
       className={cn(
         'text-white rounded-lg flex flex-col gap-1 md:gap-2 text-md md:text-base',
         feature.isBorder ? 'border-white border-1' : '',
-        feature.bgColor && `${BG_COLORS[feature.bgColor]}/${feature.bgOpacity}`,
+        bgColor,
         className
       )}
     >
@@ -50,4 +52,23 @@ const BrandAdFeatureCard: React.FC<any> = ({ feature, index, className }) => {
   );
 };
 
-export { FeatureCard, BrandAdFeatureCard };
+const MarketOptFeatureCard: React.FC<any> = ({ feature, index, className }) => {
+  const bgColor =
+    feature.bgColor && `${BG_COLORS[feature.bgColor]}/${feature.bgOpacity}`;
+  return (
+    <div key={index + feature.title} className={cn('w-full h-full bg-primary', className)}>
+      <div
+        className={cn(
+          'w-full h-full flex text-white rounded-md font-semibold items-center justify-center text-center text-xs md:text-base p-1 md:px-2 md:py-4',
+          feature.isBorder ? 'border-white border-1' : '',
+          bgColor,
+          'shadow-lg'
+        )}
+      >
+        {feature.title}
+      </div>
+    </div>
+  );
+};
+
+export { FeatureCard, BrandAdFeatureCard, MarketOptFeatureCard };

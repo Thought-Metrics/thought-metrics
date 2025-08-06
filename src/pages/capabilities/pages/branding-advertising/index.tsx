@@ -18,11 +18,7 @@ const CapabilitiesBrandingAdvertisingPage: React.FC = () => {
         imgClassName="md:rounded-b-none h-[25rem] w-full"
         qandaClassName="md:pl-10"
       />
-      <BrandAdFeatureSection
-        featureSection={pageContent.featureSection}
-        className=""
-        cardClassName=""
-      />
+      <BrandAdFeatureSection featureSection={pageContent.featureSection}/>
       <BrandAdB2BServices b2bServiceSection={pageContent.b2bServiceSection} />
       <CapabilityActionSection actionSection={pageContent.actionSection} />
     </>

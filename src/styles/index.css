@@ -60,9 +60,15 @@ body {
 }
 
 .common-component {
-  @apply w-full flex justify-center;
+  @apply w-full flex justify-center min-w-[1280px];
 }
 
 .common-container {
   @apply w-full max-w-[1920px] flex;
+}
+
+@media (max-width: 768px) {
+  .common-component {
+    @apply w-full flex justify-center min-w-auto;
+  }
 }
