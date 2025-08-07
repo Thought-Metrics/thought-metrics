@@ -106,8 +106,36 @@ const MarketOpportunitySection: React.FC<any> = ({ serviceSection }: any) => {
   );
 };
 
+const ProductResearchSection: React.FC<any> = ({ serviceSection }: any) => {
+  return (
+    <section className="common-component w-full h-full relative bg-white text-black">
+      <div className="common-container px-6 py-10 md:px-24 md:py-16 !max-w-[1336px] flex-col gap-6">
+        <div className="grid grid-cols-1 grid-rows-1 md:grid-rows-2 md:grid-cols-3 gap-4">
+          {serviceSection.title && (
+            <h2 className="h-full w-[70%] text-[1.1rem] md:text-3xl font-semibold leading-[1.25] tracking-normal flex items-center py-6">
+              <span>{serviceSection.title}</span>
+            </h2>
+          )}
+          {serviceSection.items.map((service: any, index: number) => (
+            <div className="relative p-2 flex flex-col items-center justify-center">
+              <ServiceCard
+                service={service}
+                index={index}
+                className="px-4 py-12 gap-3 w-full h-full"
+                iconClassName="absolute -top-6 bg-white w-16 h-16 p-2"
+                contentClassName="text-md"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 export {
   IndustryServiceSection,
   ResearchServiceSection,
   MarketOpportunitySection,
+  ProductResearchSection,
 };

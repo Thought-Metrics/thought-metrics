@@ -570,12 +570,13 @@ export const capabilities = {
           className: 'absolute right-0 top-0 m-5 w-[23%] h-[23%]',
           title: 'Competitive Analysis',
           description:
-            'Competitive landscape analysis framework assessments include SWOT analysis, Porter’s Five Forces Analysis, PESTEL Analysis, competitive benchmarking, value chain analysis, customer analysis, product and service analysis, market share analysis, price and cost analysis, trend analysis, scenario planning and competitive mapping.',
+            "Competitive landscape analysis framework assessments include SWOT analysis, Porter's Five Forces Analysis, PESTEL Analysis, competitive benchmarking, value chain analysis, customer analysis, product and service analysis, market share analysis, price and cost analysis, trend analysis, scenario planning and competitive mapping.",
           backgroundColor: 'green',
           illustration: CompetitiveAnalysisIllustration,
         },
         {
-          className: 'absolute right-20 w-[18rem] h-[20rem] top-1/2 transform -translate-y-1/2',
+          className:
+            'absolute right-20 w-[18rem] h-[20rem] top-1/2 transform -translate-y-1/2',
           title: 'Go-to-market Research',
           description:
             'New product launch, market expansion, business changes, rebranding or repositioning, competitive analysis, customer feedback, sales performance concerns, product or service enhancements, marketing strategy review, continuous improvement.',
@@ -583,7 +584,8 @@ export const capabilities = {
           illustration: GotoIllustration,
         },
         {
-          className: 'absolute right-1/6 h-[70%] top-1/2 transform -translate-y-1/2',
+          className:
+            'absolute right-1/6 h-[70%] top-1/2 transform -translate-y-1/2',
           title: 'Market Entry Research',
           description:
             'Cultural and language barriers, regulatory complexity, competitive dynamics, dynamic market conditions, resource constraints, time sensitivity, consumer behavior, distribution channels, risk assessment, customer feedback and market perception, partnership and alliances, entry strategy.',
@@ -769,7 +771,7 @@ export const capabilities = {
       ],
     },
     featureSection: {
-      title: 'From Concept to Market: The Product Testing Journey',
+      title: 'From Concept to Market:<br> The Product Testing Journey',
       items: [
         {
           title: 'Idea Generation',
@@ -840,7 +842,7 @@ export const capabilities = {
     b2bServiceSection: {
       services: [
         {
-          className: 'absolute right-0 top-0 m-5 w-[23%] h-[23%]',
+          className: 'absolute left-0 bottom-0 m-5 w-[20%] h-[20%] ml-12',
           title: 'Conjoint Analysis',
           description:
             'Conjoint Analysis is based on the idea that consumers make trade-offs when selecting options, and it helps businesses determine which combination of attributes is most appealing to their target audience. Methods include, discrete choice, rating based, best-worst scaling, adaptive conjoint analysis',
@@ -848,7 +850,7 @@ export const capabilities = {
           illustration: ConjointAnalysisIllustration,
         },
         {
-          className: 'absolute -bottom-5 right-20 w-[20rem] h-full',
+          className: 'absolute -bottom-5 right-14 w-[20rem] h-full',
           title: 'MaxDiff Analysis',
           description:
             'MaxDiff allows researchers to determine the relative importance of various attributes or features by presenting respondents with sets of choices and asking them to indicate their most and least preferred options. MaxDiff analysis is particularly useful for attribute prioritization, market segmentation, and understanding the key factors that influence consumer preferences',
@@ -856,7 +858,7 @@ export const capabilities = {
           illustration: MountainIllustration,
         },
         {
-          className: 'absolute top-8 right-0 h-[70%]',
+          className: 'absolute top-8 right-12 h-[80%]',
           title: 'Product Validation testing',
           description:
             'Product validation testing is a way to check that your new product, service or feature meets a real-life need of your clients and prospects – before you go into development. It includes feasibility testing and user validation testing.',
@@ -864,8 +866,8 @@ export const capabilities = {
           illustration: ProductValidationIllustration,
         },
         {
-          className: 'absolute right-26 bottom-14 w-[12%] h-[12%]',
-          className1: 'absolute left-20 bottom-5 w-[18%] h-[18%]',
+          className: 'absolute right-8 top-8 w-[16%] h-[16%]',
+          className1: 'absolute left-0 ml-8 bottom-4 w-[22%] h-[22%]',
           title: 'UX Research',
           description:
             'Avoid unleashing a poor user experience that not only diminishes the product, but damages the brand trust you’ve worked so hard to build using UX mockup testing, tree testing, card sorting, usability studies',
