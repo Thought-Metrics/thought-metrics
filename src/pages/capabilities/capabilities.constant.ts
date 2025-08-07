@@ -1021,7 +1021,7 @@ export const capabilities = {
       ],
     },
     featureSection: {
-      title: 'Pillar of Deep Customer Understanding',
+      title: 'Pillar of Deep Customer<br>Understanding',
       items: [
         {
           title: 'Behavioral Drivers',

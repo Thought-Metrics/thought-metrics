@@ -21,7 +21,14 @@ const QuestionaryCardValue: React.FC<any> = ({
     );
   }
   if (questionary.description) {
-    return <p className="mt-4 md:text-xl">{questionary.description}</p>;
+    return (
+      <p
+        className="mt-4 md:text-xl"
+        dangerouslySetInnerHTML={{
+          __html: questionary.description,
+        }}
+      />
+    );
   }
 };
 
