@@ -19,7 +19,7 @@ const CapabilitiesCustomerResearchPage: React.FC = () => {
         qandaClassName="md:pl-10"
       />
       <CustomerResearchFeatureSection featureSection={pageContent.featureSection} />
-      {/* <CustomerResearchB2BServices b2bServiceSection={pageContent.b2bServiceSection} /> */}
+      <CustomerResearchB2BServices b2bServiceSection={pageContent.b2bServiceSection} />
       <CapabilityActionSection actionSection={pageContent.actionSection} />
     </>
   );
