@@ -1,4 +1,4 @@
-import { ArrowRed } from '@/assets';
+import { ArrowRed, MarketOptFeatureIllustration } from '@/assets';
 import { cn } from '@/core/utils/cn';
 import { MarketOptFeatureCard } from '@/shared/ui/molecules/feature-card';
 const MarketOptFeatureSection: React.FC<any> = ({
@@ -19,7 +19,7 @@ const MarketOptFeatureSection: React.FC<any> = ({
         {/* Desktop view */}
         <div
           className={cn(
-            'grid grid-cols-1 grid-rows-3 gap-14 md:gap-6 bg-primary',
+            'hidden md:grid grid-cols-1 grid-rows-3 gap-14 md:gap-6 bg-primary',
             className
           )}
         >
@@ -62,7 +62,7 @@ const MarketOptFeatureSection: React.FC<any> = ({
                           'block md:hidden'
                       )}
                     >
-                      <ArrowRed className='stroke-white w-[1rem] h-[1rem]' />
+                      <ArrowRed className="stroke-white w-[1rem] h-[1rem]" />
                     </div>
                   )}
                   {feature.isLowerCurve && (
@@ -92,6 +92,10 @@ const MarketOptFeatureSection: React.FC<any> = ({
               )}
             </div>
           ))}
+        </div>
+        {/* Mobile View */}
+        <div className="">
+          <MarketOptFeatureIllustration className="md:hidden w-full" />
         </div>
       </div>
     </section>

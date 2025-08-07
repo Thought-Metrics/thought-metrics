@@ -200,5 +200,9 @@ export {
   PrototypeEvaluationIcon,
   RiskMitigationIcon,
   PostLaunchInsightIcon,
-  DataDrivenIcon
+  DataDrivenIcon,
 };
+
+import MarketOptFeatureIllustration from './svgs/market_opt_feature.svg?react';
+
+export { MarketOptFeatureIllustration };
