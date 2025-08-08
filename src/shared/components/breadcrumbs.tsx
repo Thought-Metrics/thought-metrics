@@ -29,7 +29,7 @@ export const Breadcrumbs: React.FC<BreadcrumbProps> = ({ className = '' }) => {
       <ol className="flex flex-wrap gap-2 md:gap-3 items-center space-x-1">
         {breadcrumbs.map((item: BreadcrumbItem, index: number) => (
           <li key={item.path || item.label} className="flex flex-wrap gap-2 md:gap-3 items-center">
-            {index > 0 && <ArrowRed />}
+            {index > 0 && <ArrowRed className='fill-current text-primary' />}
 
             {item.isCurrentPage ? (
               <span

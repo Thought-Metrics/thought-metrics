@@ -59,7 +59,7 @@ const QuestionaryCard: React.FC<any> = ({ questionnaires, className = '' }) => {
                 {questionary.title}
               </h2>
               <ArrowRed
-                className={`w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 ease-in-out ${questionary.title === activeQuestionary ? '-rotate-90' : 'rotate-90'}`}
+                className={`fill-current text-primary w-6 h-6 md:w-8 md:h-8 transition-transform duration-300 ease-in-out ${questionary.title === activeQuestionary ? '-rotate-90' : 'rotate-90'}`}
               />
             </button>
 

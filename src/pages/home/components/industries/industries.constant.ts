@@ -21,11 +21,11 @@ export const industryData = {
       title: 'FMCG',
       subtitle: "Meet Your Customers' Needs Every Time",
       description:
-        "In the ever-evolving world of consumer packaged goods, staying ahead of the curve is not just an option—it's a necessity. Here's how Thought Metrics can guide you to success:",
+        "In the ever-evolving world of consumer packaged goods, staying ahead of the curve is not just an option—it's a necessity.",
       bulletPoints: [
-        'Connect with the right people to make the right decisions even when you need to move quickly.',
-        'Better understand not just what customers want and need, but why and how they make their decisions.',
-        'Gain feedback at every phase of product and ad development, from concept to execution with agile testing.',
+        'Connect with the right people',
+        'Better understand how customers make their decisions.',
+        'Gain feedback at every phase of product development',
       ],
       image: '/illustrations/illustration-store.svg',
       imageAlt: 'FMCG retail store aisle',
@@ -65,23 +65,6 @@ export const industryData = {
       tabNumber: '03',
     },
     {
-      id: 'insurance',
-      label: 'Insurance',
-      title: 'Insurance',
-      subtitle: 'Simplify the Complex, Earn Customer Confidence',
-      description:
-        'Insurance decisions are personal and complex — we help you:',
-      bulletPoints: [
-        'Decode the motivations and anxieties behind insurance choices.',
-        'Test policy concepts, channels, and messaging before launch.',
-        'Build clarity and trust through research-led communication.',
-      ],
-      image: '/illustrations/illustration-insurance.svg',
-      imageAlt: 'Person signing home insurance policy document',
-      tabNumber: '04',
-      isMobile: true,
-    },
-    {
       id: 'investors',
       label: 'Investors',
       title: 'Investors',
@@ -95,7 +78,7 @@ export const industryData = {
       ],
       image: '/illustrations/illustration-investors.svg',
       imageAlt: 'Group of people analyzing business data',
-      tabNumber: '05',
+      tabNumber: '04',
     },
     {
       id: 'media',
@@ -110,7 +93,7 @@ export const industryData = {
       ],
       image: '/illustrations/illustration-media.svg',
       imageAlt: 'Media professional recording video with camera',
-      tabNumber: '06',
+      tabNumber: '05',
     },
     {
       id: 'technology',
@@ -126,7 +109,7 @@ export const industryData = {
       ],
       image: '/illustrations/illustration-tech.svg',
       imageAlt: 'Person reviewing code on a computer screen',
-      tabNumber: '07',
+      tabNumber: '06',
     },
     {
       id: 'automotive',
@@ -142,7 +125,7 @@ export const industryData = {
       ],
       image: '/illustrations/illustration-automobile.svg',
       imageAlt: 'Close-up of sports car wheel',
-      tabNumber: '08',
+      tabNumber: '07',
     },
     {
       id: 'advertising-marketing',
@@ -158,7 +141,7 @@ export const industryData = {
       ],
       image: '/illustrations/illustration-advertising.svg',
       imageAlt: 'Crowded Times Square with advertising billboards',
-      tabNumber: '09',
+      tabNumber: '08',
       shortTitle: 'Advertising',
     },
     {
@@ -175,7 +158,7 @@ export const industryData = {
       ],
       image: '/illustrations/illustration-hr.svg',
       imageAlt: 'Corporate employees in HR interview discussion',
-      tabNumber: '10',
+      tabNumber: '09',
     },
     {
       id: 'education',
@@ -191,7 +174,7 @@ export const industryData = {
       ],
       image: '/illustrations/illustration-education.svg',
       imageAlt: 'Student learning in a classroom environment',
-      tabNumber: '11',
+      tabNumber: '10',
     },
     {
       id: 'healthcare',
@@ -207,7 +190,7 @@ export const industryData = {
       ],
       image: '/illustrations/illustration-parma.svg',
       imageAlt: 'Healthcare consultation',
-      tabNumber: '12',
+      tabNumber: '11',
       shortTitle: 'Healthcare',
     },
   ] as IndustryTabData[],

@@ -10,7 +10,7 @@ const BrandAdFeatureSection: React.FC<any> = ({
   return (
     <section className="common-component w-full h-full relative bg-primary">
       <div className="hidden md:flex absolute w-full h-full justify-start items-center md:p-0 z-1">
-        <IllustrationSquares1 className="xl:h-[60%] xxl:h-[70%] w-auto stroke-2 md:stroke-1" />
+        <IllustrationSquares1 className="xl:h-[60%] xxl:h-[70%] w-auto stroke-2 md:stroke-1 stroke-primary" />
       </div>
       <div className="common-container relative px-6 py-8 md:px-24 md:py-24 !max-w-[1336px] flex-col gap-12 z-10">
         <div className="flex items-end gap-2 relative">

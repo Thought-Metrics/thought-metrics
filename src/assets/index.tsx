@@ -206,3 +206,7 @@ export {
 import MarketOptFeatureIllustration from './svgs/market_opt_feature.svg?react';
 
 export { MarketOptFeatureIllustration };
+
+/* Blog Illustration */
+import ResourcesIllustration from './svgs/resources.svg?react';
+export { ResourcesIllustration };

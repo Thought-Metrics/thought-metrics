@@ -1,9 +1,10 @@
 export interface BlogCardData {
   id: string;
-  image: string;
-  imageAlt: string;
-  category: string;
-  title: string;
+  src: string;
+  alt: string;
+  type: string;
+  label: string;
+  description: string;
   link: string;
 }
 
@@ -12,38 +13,42 @@ export const blogPageData = {
   cards: [
     {
       id: 'blog-1',
-      image: '/illustrations/illustration-child-shine.svg',
-      imageAlt: 'Children raising hands in classroom',
-      category: 'Blog',
-      title:
-        'Gain feedback at every phase of product and ad development, from concept to execution with agile testing.',
+      src: '/illustrations/illustration-child-shine.svg',
+      alt: 'AI & Empathy: Can Machines Decode Human Emotions in UX?',
+      type: 'Insight',
+      label: 'AI & Empathy: Can Machines Decode Human Emotions in UX?',
+      description:
+        'A thought-provoking exploration of how far AI has come in understanding human emotion during user experience research — and where it still falls short.',
       link: '#',
     },
     {
       id: 'blog-2',
-      image: '/illustrations/illustration-growth-chart.svg',
-      imageAlt: 'Business growth chart',
-      category: 'Blog',
-      title:
-        'Gain feedback at every phase of product and ad development, from concept to execution with agile testing.',
+      src: '/illustrations/illustration-growth-chart.svg',
+      alt: '2025 Trends in AI-Driven User Research: Benchmarks',
+      type: 'Report',
+      label: '2025 Trends in AI-Driven User Research: Benchmarks',
+      description:
+        'Based on data from 200+ global teams, this report covers key adoption trends, performance benchmarks, and future forecasts for AI integration in UX research workflows.',
       link: '#',
     },
     {
-      id: 'blog-3',
-      image: '/illustrations/illustration-communicate.svg',
-      imageAlt: 'Couple using mobile device',
-      category: 'Blog',
-      title:
-        'Gain feedback at every phase of product and ad development, from concept to execution with agile testing.',
+      id: 'blog-1',
+      src: '/illustrations/illustration-communicate.svg',
+      alt: 'Beyond Speed: The Strategic Value of AI in Qualitative Research',
+      type: 'Whitepaper',
+      label: 'Beyond Speed: The Strategic Value of AI in Qualitative Research',
+      description:
+        'This whitepaper examines the long-term business impact of using AI for qualitative insight — from verbatim analysis to participant segmentation.',
       link: '#',
     },
     {
-      id: 'blog-4',
-      image: '/illustrations/illustration-work-desk.svg',
-      imageAlt: 'Team working at desk',
-      category: 'Blog',
-      title:
-        'Gain feedback at every phase of product and ad development, from concept to execution with agile testing.',
+      id: 'blog-1',
+      src: '/illustrations/illustration-work-desk.svg',
+      alt: 'How AI is Changing the Way We Ask Questions',
+      type: 'Blog',
+      label: 'How AI is Changing the Way We Ask Questions',
+      description:
+        'What if your survey could rewrite itself mid-way? This blog post looks at the rise of adaptive surveys and how AI is making questionnaires more relevant, responsive, and human.',
       link: '#',
     },
   ] as BlogCardData[],

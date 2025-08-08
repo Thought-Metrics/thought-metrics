@@ -1,4 +1,4 @@
-import { ArrowRed, MarketOptFeatureIllustration } from '@/assets';
+import { MarketOptFeatureIllustration } from '@/assets';
 import { cn } from '@/core/utils/cn';
 import { MarketOptFeatureCard } from '@/shared/ui/molecules/feature-card';
 const MarketOptFeatureSection: React.FC<any> = ({
@@ -52,28 +52,6 @@ const MarketOptFeatureSection: React.FC<any> = ({
                         '-left-6 w-[1.5rem]'
                       )}
                     />
-                  )}
-                  {feature.isArrow && (
-                    <div
-                      className={cn(
-                        'absolute -top-1 left-1/2 transform -translate-1/2 -z-1 rotate-90 hidden overflow-hidden',
-                        colIndex === 0 &&
-                          colIndex !== subitem.length - 1 &&
-                          'block md:hidden'
-                      )}
-                    >
-                      <ArrowRed className="stroke-white w-[1rem] h-[1rem]" />
-                    </div>
-                  )}
-                  {feature.isLowerCurve && (
-                    <div className="md:hidden absolute -bottom-7.5 right-[49%]">
-                      <div className="relative w-8 h-7.5 border-b-2 border-r-2 rounded-br-lg"></div>
-                    </div>
-                  )}
-                  {feature.isUpperCurve && (
-                    <div className="md:hidden absolute -top-7 left-[49%]">
-                      <div className="relative w-8 h-6 border-t-2 border-l-2 rounded-tl-lg"></div>
-                    </div>
                   )}
                 </div>
               ))}
